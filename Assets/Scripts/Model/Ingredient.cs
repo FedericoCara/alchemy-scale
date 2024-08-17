@@ -3,23 +3,11 @@ using UnityEngine;
 
 namespace Model
 {
-    [CreateAssetMenu(menuName = "AlchemyScale/Ingredient")]
-    public class Ingredient : ScriptableObject
+    public abstract class Ingredient : ScriptableObject
     {
-        [SerializeField] private int weight;
-        [SerializeField] private List<Sinergy> sinergies;
+        [SerializeField] protected int weight;
         public int Weight => weight;
-        public List<Sinergy> Sinergies => new List<Sinergy>(sinergies);
-
-        public int CalculateWeight(List<Ingredient> previousIngredients)
-        {
-            var resultingWeight = weight;
-            foreach (var sinergy in sinergies)
-            {
-                weight += sinergy.CalcAddedWeight(previousIngredients);
-            }
-
-            return resultingWeight;
-        }
+        
+        public abstract int CalculateWeight(List<Ingredient> previousIngredients);
     }
 }
