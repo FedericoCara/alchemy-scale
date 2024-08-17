@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using Model;
 using UnityEngine;
 
-namespace Model
+namespace Components
 {
     public class Cauldron : MonoBehaviour
     {
@@ -10,7 +11,7 @@ namespace Model
         public MixResult Mix()
         {
             int resultingWeight = 0;
-            List<Ingredient> previousIngredients = new List<Ingredient>(ingredients.Count);
+            var previousIngredients = new List<Ingredient>(ingredients.Count);
             foreach (var ingredient in ingredients)
             {
                 resultingWeight += ingredient.CalculateWeight(previousIngredients);
@@ -18,16 +19,6 @@ namespace Model
             }
 
             return new MixResult(resultingWeight);
-        }
-    }
-
-    public class MixResult
-    {
-        private readonly int _resultingWeight;
-
-        public MixResult(int resultingWeight)
-        {
-            _resultingWeight = resultingWeight;
         }
     }
 }
