@@ -8,5 +8,16 @@ namespace Model
     {
         [SerializeField] private int weight;
         [SerializeField] private List<Sinergy> sinergies;
+
+        public int CalculateWeight(List<Ingredient> previousIngredients)
+        {
+            var resultingWeight = weight;
+            foreach (var sinergy in sinergies)
+            {
+                weight += sinergy.CalcAddedWeight(previousIngredients);
+            }
+
+            return resultingWeight;
+        }
     }
 }
