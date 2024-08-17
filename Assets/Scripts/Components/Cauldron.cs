@@ -10,15 +10,7 @@ namespace Components
 
         public MixResult Mix()
         {
-            int resultingWeight = 0;
-            var previousIngredients = new List<Ingredient>(ingredients.Count);
-            foreach (var ingredient in ingredients)
-            {
-                resultingWeight += ingredient.CalculateWeight(previousIngredients);
-                previousIngredients.Add(ingredient);
-            }
-
-            return new MixResult(resultingWeight);
+            return new MixResult(ResolveWeight.CalculateWeight(ingredients));
         }
     }
 }

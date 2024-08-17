@@ -6,9 +6,6 @@ namespace Model
     [CreateAssetMenu(menuName = "AlchemyScale/Subtraction Modifier")]
     public class SubtractionModifier : Ingredient
     {
-        public override int CalculateWeight(List<Ingredient> previousIngredients)
-        {
-            throw new System.NotImplementedException();
-        }
+        public override int CalculateWeight(List<Ingredient> previousIngredients) => 0;
     }
 }
