@@ -7,6 +7,7 @@ namespace Model
     public class LiveIngredient : Ingredient
     {
         [SerializeField] private List<Sinergy> sinergies;
+        public List<Sinergy> Synergies => sinergies;
 
         public override int CalculateWeight(List<Ingredient> previousIngredients)
         {
