@@ -8,6 +8,8 @@ namespace Model
     {
         [SerializeField] private int weight;
         [SerializeField] private List<Sinergy> sinergies;
+        public int Weight => weight;
+        public List<Sinergy> Sinergies => new List<Sinergy>(sinergies);
 
         public int CalculateWeight(List<Ingredient> previousIngredients)
         {
