@@ -15,6 +15,6 @@ MonoBehaviour:
   weight: 1
   sinergies:
   - ingredient: {fileID: 11400000, guid: 654c59263e10f4490a91f2a341096066, type: 2}
-    amount: 1
+    amount: 2
     weightAdded: 1
     repeatable: 1

@@ -13,7 +13,7 @@ namespace Model
             var resultingWeight = weight;
             foreach (var sinergy in sinergies)
             {
-                weight += sinergy.CalcAddedWeight(previousIngredients);
+                resultingWeight += sinergy.CalcAddedWeight(previousIngredients);
             }
 
             return resultingWeight;

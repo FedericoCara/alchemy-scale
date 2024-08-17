@@ -18,6 +18,7 @@ public class GlossaryView : MonoBehaviour
 
     public void Init()
     {
+        IngredientViews = new List<IngredientView>();
         foreach (var ingredient in Ingredients)
         {
             var ingredientView = Instantiate(IngredientViewPrefab, transform);
