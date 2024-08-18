@@ -9,6 +9,7 @@ public class GlossaryView : MonoBehaviour
 {
     [SerializeField] private List<Ingredient> Ingredients;
     [SerializeField] private IngredientView IngredientViewPrefab;
+    [SerializeField] private Transform ingredientViewParent;
     private List<IngredientView> IngredientViews;
 
     private void Start()
@@ -21,7 +22,7 @@ public class GlossaryView : MonoBehaviour
         IngredientViews = new List<IngredientView>();
         foreach (var ingredient in Ingredients)
         {
-            var ingredientView = Instantiate(IngredientViewPrefab, transform);
+            var ingredientView = Instantiate(IngredientViewPrefab, ingredientViewParent);
             ingredientView.Init(ingredient);
             IngredientViews.Add(ingredientView);
         }
