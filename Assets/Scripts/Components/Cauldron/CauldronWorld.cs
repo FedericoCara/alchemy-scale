@@ -11,8 +11,10 @@ namespace Components.Cauldron
         public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
+        public GameManager gameManager;
 
         private Model.Cauldron _cauldron = new();
+        private MixResult _lastMixResult;
 
         public void Mix()
         {
@@ -39,20 +41,30 @@ namespace Components.Cauldron
 
         public void OnAnimateStartFinished()
         {
-            var result = _cauldron.Mix(ingredients);
-            if (IsSuccess(result))
+            _lastMixResult = _cauldron.Mix(ingredients);
+            cauldronAnimator.AnimateSpin();
+            Invoke(nameof(StopCauldron), 3);
+            Invoke(nameof(OnFeedbackFinished), 5);
+        }
+
+        private void StopCauldron()
+        {
+            cauldronAnimator.StopSpinning();
+            if (IsSuccess(_lastMixResult))
             {
-                cauldronAnimator.AnimateSuccess();
+                gameManager.SetSuccess();
             }
             else
             {
-                cauldronAnimator.AnimateFail();
+                gameManager.SetFail();
             }
         }
 
         public void OnFeedbackFinished()
         {
             camAnimator.ReturnToMainPosition();
+            if (mixButton != null)
+                mixButton.gameObject.SetActive(true);
         }
 
         private bool IsSuccess(MixResult result)
