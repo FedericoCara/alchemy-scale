@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: A
+  m_Name: B Ojo
   m_EditorClassIdentifier: 
-  weight: 3
+  iconSprite: {fileID: -1785079892, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  weight: 25
   sinergies:
-  - ingredient: {fileID: 11400000, guid: b5b00a4a1f06c4157b41b59ba43f1193, type: 2}
+  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 1
-    weightAdded: 2
+    weightAdded: -10
     repeatable: 0

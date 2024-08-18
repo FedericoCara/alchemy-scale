@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a914c41c319f4a74b48216908403e532, type: 3}
-  m_Name: Gema
+  m_Name: H Piedra preciosa
   m_EditorClassIdentifier: 
   iconSprite: {fileID: -444924830, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
-  weight: -1
+  weight: 0

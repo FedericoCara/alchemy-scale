@@ -16,6 +16,7 @@ namespace Model
         [SerializeField]
         private List<Level> levels;
 
+
         public Level CurrentLevel => levels[currentLevelIndex];
 
         public Level GetAndSetNextLevel()
@@ -27,6 +28,18 @@ namespace Model
                 return CurrentLevel;
             }
             return null;
+        }
+
+        private int _startingLevelIndex;
+
+        private void OnEnable()
+        {
+            _startingLevelIndex = currentLevelIndex;
+        }
+
+        private void OnDisable()
+        {
+            currentLevelIndex = _startingLevelIndex;
         }
     }
 }

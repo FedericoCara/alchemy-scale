@@ -286,7 +286,11 @@ MonoBehaviour:
   - {fileID: 4828391449772708305, guid: c165da2e586924f34959e1c9ceeac36c, type: 3}
   - {fileID: 1877958538834859223, guid: af2938850e3874574bca411a9711e76a, type: 3}
   - {fileID: 3744538849055208449, guid: 278a1cf5bcbf84dd4a3428cae5d1397c, type: 3}
-  - {fileID: 7734570187469280706, guid: 103a6b0edbec94349b78dbc00a8d9eee, type: 3}
+  - {fileID: 3744538849055208449, guid: bd7c6453306d446d6a26171c16a9ef4d, type: 3}
+  - {fileID: 3744538849055208449, guid: d39fc311c513c429b82ed0eccf80b7bc, type: 3}
+  - {fileID: 3744538849055208449, guid: 12e6ae9059cd249fd85a752784ceb6e7, type: 3}
+  - {fileID: 3744538849055208449, guid: e82dd5005cd1043a8ac632f95359a8eb, type: 3}
+  - {fileID: 3744538849055208449, guid: 443de5e6bd8e84038b1edf4372fa4a1f, type: 3}
   timeBetweenSpawns: 0.1
   randomTimeBetweenSpawns: 0.05
   previewHeight: 3

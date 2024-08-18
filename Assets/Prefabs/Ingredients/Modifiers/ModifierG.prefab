@@ -169,12 +169,12 @@ PrefabInstance:
         type: 3}
       propertyPath: ingredient
       value: 
-      objectReference: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9,
+      objectReference: {fileID: 11400000, guid: fac68ae2510de4a8e870f93bd49cb205,
         type: 2}
     - target: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
         type: 3}
       propertyPath: m_Name
-      value: IngredientC
+      value: IngredientG
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

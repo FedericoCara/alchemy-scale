@@ -10,11 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: B
+  m_Name: D Hongos
   m_EditorClassIdentifier: 
-  weight: 1
-  sinergies:
-  - ingredient: {fileID: 11400000, guid: 654c59263e10f4490a91f2a341096066, type: 2}
-    amount: 2
-    weightAdded: 1
-    repeatable: 1
+  iconSprite: {fileID: -1918552875, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  weight: 75
+  sinergies: []

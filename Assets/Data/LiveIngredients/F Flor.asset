@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: Hierbas
+  m_Name: F Flor
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: -1556727742, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
-  weight: 60
+  iconSprite: {fileID: 1427493831, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  weight: 30
   sinergies:
-  - ingredient: {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
+  - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
     amount: 1
     weightAdded: -10
     repeatable: 0

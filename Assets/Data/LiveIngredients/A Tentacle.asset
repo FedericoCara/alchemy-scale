@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: C
+  m_Name: A Tentacle
   m_EditorClassIdentifier: 
-  weight: 2
+  iconSprite: {fileID: 2130476049, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  weight: 10
   sinergies:
-  - ingredient: {fileID: 11400000}
+  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
     amount: 1
-    weightAdded: 1
+    weightAdded: 10
     repeatable: 0

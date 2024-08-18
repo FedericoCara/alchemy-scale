@@ -54,14 +54,21 @@ namespace Components.Cauldron
         private void StopCauldron()
         {
             cauldronAnimator.StopSpinning();
+            EmptyIngredients();
             if (IsSuccess(_lastMixResult))
             {
                 gameManager.SetSuccess();
             }
             else
             {
+                Debug.Log("Cauldron failed with weight: "+_lastMixResult.resultingWeight);
                 gameManager.SetFail();
             }
+        }
+
+        private void EmptyIngredients()
+        {
+            ingredients.Clear();
         }
 
         public void OnFeedbackFinished()

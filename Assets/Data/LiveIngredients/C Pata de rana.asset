@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: Flor
+  m_Name: C Pata de rana
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 1427493831, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
-  weight: 30
+  iconSprite: {fileID: 977821069, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  weight: 50
   sinergies:
-  - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
+  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 1
-    weightAdded: -10
-    repeatable: 0
+    weightAdded: -20
+    repeatable: 1
