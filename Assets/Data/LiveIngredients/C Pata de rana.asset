@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: C Pata de rana
   m_EditorClassIdentifier: 
   iconSprite: {fileID: 977821069, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 66115c350f01fd849b0c30192b413e7c, type: 3}
   weight: 50
   sinergies:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}

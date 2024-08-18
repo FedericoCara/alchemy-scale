@@ -4997,6 +4997,7 @@ GameObject:
   m_Component:
   - component: {fileID: 17478978098416787}
   - component: {fileID: 7382312527104721216}
+  - component: {fileID: 1701210419240072110}
   m_Layer: 0
   m_Name: MixPreview
   m_TagString: Untagged
@@ -5047,6 +5048,19 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 5
+--- !u!114 &1701210419240072110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8324244203790587633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5436e9503841dda4ce92c27d6d8ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previewParent: {fileID: 17478978098416787}
 --- !u!1 &8733279144109956891
 GameObject:
   m_ObjectHideFlags: 0
@@ -5172,6 +5186,7 @@ MonoBehaviour:
   mixButton: {fileID: 0}
   camAnimator: {fileID: 0}
   cauldronAnimator: {fileID: 4633432956896541183}
+  cauldronPreview: {fileID: 1701210419240072110}
   scaleController: {fileID: 0}
 --- !u!114 &4633432956896541183
 MonoBehaviour:

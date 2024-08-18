@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: D Hongos
   m_EditorClassIdentifier: 
   iconSprite: {fileID: -1918552875, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 6de75a7110f3635489ebac1b75668b6f, type: 3}
   weight: 75
   sinergies: []

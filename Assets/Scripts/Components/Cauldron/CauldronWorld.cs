@@ -13,6 +13,7 @@ namespace Components.Cauldron
         public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
+        public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
 
         private Model.Cauldron _cauldron = new();
@@ -28,6 +29,7 @@ namespace Components.Cauldron
         public void AddIngredient(IngredientWorld ingredient)
         {
             ingredients.Add(ingredient.ingredient);
+            cauldronPreview.Add(ingredient.ingredient);
             ingredient.gameObject.SetActive(false);
         }
 
@@ -68,6 +70,7 @@ namespace Components.Cauldron
 
         private void EmptyIngredients()
         {
+            cauldronPreview.Clear();
             ingredients.Clear();
         }
 

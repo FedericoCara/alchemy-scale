@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: E Hierbas
   m_EditorClassIdentifier: 
   iconSprite: {fileID: -1556727742, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: d492fc9d3e33eca40b2118a964e6e4d5, type: 3}
   weight: 60
   sinergies:
   - ingredient: {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}

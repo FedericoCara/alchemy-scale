@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: A Tentacle
   m_EditorClassIdentifier: 
   iconSprite: {fileID: 2130476049, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 255cdc63ad5f2774b9d6c528e00144d7, type: 3}
   weight: 10
   sinergies:
   - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}

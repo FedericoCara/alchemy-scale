@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: G Gema
   m_EditorClassIdentifier: 
   iconSprite: {fileID: -444924830, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: f781be1fc6f320143a5ff053f1020849, type: 3}
   weight: 0

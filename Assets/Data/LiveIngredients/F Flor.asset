@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: F Flor
   m_EditorClassIdentifier: 
   iconSprite: {fileID: 1427493831, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 0aa634cbae8dcdc48acbb543129de7a6, type: 3}
   weight: 30
   sinergies:
   - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
