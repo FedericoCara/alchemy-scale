@@ -7,8 +7,9 @@ namespace Model
     [CreateAssetMenu(menuName = "AlchemyScale/Level Manager")]
     public class LevelManager : ScriptableObject
     {
-        [SerializeField]
         private int currentLevelIndex;
+        [SerializeField]
+        private int _startingLevelIndex;
 
         public int LevelNumber => currentLevelIndex + 1;
         public event Action LevelNumberChanged = () => { };
@@ -30,14 +31,8 @@ namespace Model
             return null;
         }
 
-        private int _startingLevelIndex;
 
         private void OnEnable()
-        {
-            _startingLevelIndex = currentLevelIndex;
-        }
-
-        private void OnDisable()
         {
             currentLevelIndex = _startingLevelIndex;
         }

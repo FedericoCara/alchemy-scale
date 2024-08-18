@@ -1,6 +1,7 @@
 using Components;
 using Model;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,8 +12,14 @@ public class GameManager : MonoBehaviour
 
     public void SetSuccess()
     {
+        var nextLevel = levelManager.GetAndSetNextLevel();
+        if (nextLevel == null)
+        {
+            SceneManager.LoadScene("Credits");
+            return;
+        }
+
         successGO.SetActive(true);
-        levelManager.GetAndSetNextLevel();
         ingredientsManager.RestartIngredients();
     }
 

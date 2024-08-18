@@ -19,5 +19,5 @@ MonoBehaviour:
     amount: 1
   - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
     amount: 2
-  targetWeight: 15
+  targetWeight: 85
   targetPotion: {fileID: 0}
