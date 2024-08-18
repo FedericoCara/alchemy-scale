@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace Components
 {
-    public class IngredientsSpawner : MonoBehaviour
+    public class IngredientsManager : MonoBehaviour
     {
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private List<Transform> spawnPoints;
@@ -20,20 +20,40 @@ namespace Components
         [SerializeField] private float previewHeight = 10;
         private List<Transform> remainingSpawnPoints = new();
         private Dictionary<Ingredient, IngredientWorld> _ingredientDictionary;
+        private List<IngredientWorld> _ingredientsSpawned = new();
 
         private void Awake()
         {
             BuildIngredientDictionary();
         }
 
-        private IEnumerator Start()
+        private void Start()
+        {
+            RestartIngredients();
+        }
+
+        public void RestartIngredients()
+        {
+            StartCoroutine(RestartIngredientCoroutine());
+        }
+
+        public void ClearIngredients()
+        {
+            foreach (var ingredientWorld in _ingredientsSpawned)
+            {
+                Destroy(ingredientWorld.gameObject);
+            }
+            _ingredientsSpawned.Clear();
+        }
+
+        private IEnumerator RestartIngredientCoroutine()
         {
             foreach (var startingIngredient in levelManager.CurrentLevel.startingIngredients)
             {
                 for(var i = 0; i<startingIngredient.amount;i++)
                 {
                     var nextSpawnPoint = GetNextSpawnPoint();
-                    Instantiate(_ingredientDictionary[startingIngredient.ingredient],nextSpawnPoint.position,Quaternion.Euler(0,0,Random.value*10), spawnParent);
+                    _ingredientsSpawned.Add(Instantiate(_ingredientDictionary[startingIngredient.ingredient],nextSpawnPoint.position,Quaternion.Euler(0,0,Random.value*10), spawnParent));
                     yield return new WaitForSeconds(timeBetweenSpawns+Random.value*randomTimeBetweenSpawns);
                 }
             }

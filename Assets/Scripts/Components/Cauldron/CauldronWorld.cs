@@ -8,10 +8,11 @@ namespace Components.Cauldron
     {
         public List<Ingredient> ingredients;
         public LevelManager levelManager;
+        public IngredientsManager ingredientsManager;
+        public GameManager gameManager;
         public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
-        public GameManager gameManager;
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;
@@ -43,6 +44,7 @@ namespace Components.Cauldron
         {
             _lastMixResult = _cauldron.Mix(ingredients);
             cauldronAnimator.AnimateSpin();
+            ingredientsManager.ClearIngredients();
             Invoke(nameof(StopCauldron), 3);
             Invoke(nameof(OnFeedbackFinished), 5);
         }
