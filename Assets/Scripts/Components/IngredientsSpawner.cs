@@ -37,7 +37,7 @@ namespace Components
             }
         }
 
-        private Transform GetNextSpawnPoint()
+        public Transform GetNextSpawnPoint()
         {
             if(remainingSpawnPoints.Count<=0)
                 remainingSpawnPoints.AddRange(spawnPoints);
