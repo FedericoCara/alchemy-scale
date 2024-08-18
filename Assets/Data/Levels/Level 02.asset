@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf189656a17b4bde9147a068e772631b, type: 3}
+  m_Name: Level 02
+  m_EditorClassIdentifier: 
+  startingIngredients:
+  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
+    amount: 1
+  targetWeight: 40
+  targetPotion: {fileID: 0}

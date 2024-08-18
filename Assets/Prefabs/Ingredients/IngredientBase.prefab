@@ -88,7 +88,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  clampRect: {fileID: 11400000, guid: 4599f18f6dec34929bdd13cf27992036, type: 2}
+  clampRect: {fileID: 0}
   targetRigidbody: {fileID: 2822999165824957607}
   targetCamera: {fileID: 0}
   followInputSpeed: 10

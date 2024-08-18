@@ -6,20 +6,23 @@ namespace Components
     public class OnTriggerLevelBorder : MonoBehaviour
     {
         private int _layerLevelBorder;
-        private IngredientsSpawner _spawner;
+        private IngredientsManager _manager;
 
         private void Start()
         {
-            _spawner = FindObjectOfType<IngredientsSpawner>();
+            _manager = FindObjectOfType<IngredientsManager>();
             _layerLevelBorder = LayerMask.NameToLayer("LevelBorder");
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.layer == _layerLevelBorder &&
-                _spawner!=null)
+                _manager!=null)
             {
-                transform.position = _spawner.GetNextSpawnPoint().position;
+                transform.position = _manager.GetNextSpawnPoint().position;
+                var rigidBody = transform.GetComponentInParent<Rigidbody>();
+                if(rigidBody!=null)
+                    rigidBody.velocity = Vector3.zero;
             }
         }
     }

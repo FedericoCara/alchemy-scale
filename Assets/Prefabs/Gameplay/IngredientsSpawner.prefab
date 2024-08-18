@@ -244,7 +244,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 5.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 988735315077620039}
@@ -252,10 +252,10 @@ Transform:
   - {fileID: 6827043006643524734}
   - {fileID: 6800856727611260479}
   - {fileID: 472712134576227846}
-  - {fileID: 7841735580537181596}
-  - {fileID: 1146593768834230689}
-  - {fileID: 4387624961314048251}
   - {fileID: 3644401040513175766}
+  - {fileID: 4387624961314048251}
+  - {fileID: 1146593768834230689}
+  - {fileID: 7841735580537181596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8471637936956146118
@@ -277,18 +277,23 @@ MonoBehaviour:
   - {fileID: 6827043006643524734}
   - {fileID: 6800856727611260479}
   - {fileID: 472712134576227846}
-  - {fileID: 7841735580537181596}
-  - {fileID: 1146593768834230689}
-  - {fileID: 4387624961314048251}
   - {fileID: 3644401040513175766}
+  - {fileID: 4387624961314048251}
+  - {fileID: 1146593768834230689}
+  - {fileID: 7841735580537181596}
   spawnParent: {fileID: 0}
   ingredientPrefabs:
   - {fileID: 4828391449772708305, guid: c165da2e586924f34959e1c9ceeac36c, type: 3}
   - {fileID: 1877958538834859223, guid: af2938850e3874574bca411a9711e76a, type: 3}
   - {fileID: 3744538849055208449, guid: 278a1cf5bcbf84dd4a3428cae5d1397c, type: 3}
-  - {fileID: 7734570187469280706, guid: 103a6b0edbec94349b78dbc00a8d9eee, type: 3}
+  - {fileID: 3744538849055208449, guid: bd7c6453306d446d6a26171c16a9ef4d, type: 3}
+  - {fileID: 3744538849055208449, guid: d39fc311c513c429b82ed0eccf80b7bc, type: 3}
+  - {fileID: 3744538849055208449, guid: 12e6ae9059cd249fd85a752784ceb6e7, type: 3}
+  - {fileID: 3744538849055208449, guid: e82dd5005cd1043a8ac632f95359a8eb, type: 3}
+  - {fileID: 3744538849055208449, guid: 443de5e6bd8e84038b1edf4372fa4a1f, type: 3}
   timeBetweenSpawns: 0.1
   randomTimeBetweenSpawns: 0.05
+  previewHeight: 3
 --- !u!1 &8324720146793405539
 GameObject:
   m_ObjectHideFlags: 0

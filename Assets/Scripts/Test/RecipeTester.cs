@@ -7,7 +7,7 @@ using UnityEngine;
 public class RecipeTester : MonoBehaviour
 {
     public List<IngredientList> recipes;
-    void Start()
+    void OnEnable()
     {
         foreach (var recipe in recipes)
         {
