@@ -16,7 +16,7 @@ namespace Components
         [SerializeField] private List<IngredientWorld> ingredientPrefabs;
         [SerializeField] private float timeBetweenSpawns = 0.2f;
         [SerializeField] private float randomTimeBetweenSpawns = 0.05f;
-        private int _currentSpawnPointIndex = 0;
+        private List<Transform> remainingSpawnPoints = new();
         private Dictionary<Ingredient, IngredientWorld> _ingredientDictionary;
 
         private void Awake()
@@ -30,12 +30,21 @@ namespace Components
             {
                 for(var i = 0; i<startingIngredient.amount;i++)
                 {
-                    var nextSpawnPoint = spawnPoints[_currentSpawnPointIndex];
-                    Instantiate(_ingredientDictionary[startingIngredient.ingredient],nextSpawnPoint.position,Quaternion.Euler(0,0,Random.value*5), spawnParent);
-                    _currentSpawnPointIndex = (_currentSpawnPointIndex + 1) % spawnPoints.Count;
+                    var nextSpawnPoint = GetNextSpawnPoint();
+                    Instantiate(_ingredientDictionary[startingIngredient.ingredient],nextSpawnPoint.position,Quaternion.Euler(0,0,Random.value*10), spawnParent);
                     yield return new WaitForSeconds(timeBetweenSpawns+Random.value*randomTimeBetweenSpawns);
                 }
             }
+        }
+
+        private Transform GetNextSpawnPoint()
+        {
+            if(remainingSpawnPoints.Count<=0)
+                remainingSpawnPoints.AddRange(spawnPoints);
+            var nextSpawnPointIndex = Random.Range(0, remainingSpawnPoints.Count);
+            var nextSpawnPoint = spawnPoints[nextSpawnPointIndex];
+            remainingSpawnPoints.RemoveAt(nextSpawnPointIndex);
+            return nextSpawnPoint;
         }
 
         private void BuildIngredientDictionary()
