@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 784933937142083322}
   - component: {fileID: 5597138142977468637}
   - component: {fileID: 6707906515571492681}
-  - component: {fileID: 3610097136494629481}
+  - component: {fileID: 2348206571234361417}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1337481738152618076}
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3610097136494629481
+--- !u!136 &2348206571234361417
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,10 +103,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.50000006
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0.0000038146973, y: -0.0000038146973, z: 0}
 --- !u!1001 &1900492354284124363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ PrefabInstance:
     - target: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
         type: 3}
       propertyPath: m_Name
-      value: IngredientA Variant
+      value: IngredientA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
