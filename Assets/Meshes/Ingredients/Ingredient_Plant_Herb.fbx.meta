@@ -3,7 +3,12 @@ guid: 61aad595f74b6804a82f8bf6634e038c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Balanza
+    second: {fileID: 2100000, guid: bebb036df4f3e824984a6216c9892743, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
