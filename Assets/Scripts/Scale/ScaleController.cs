@@ -19,7 +19,7 @@ public class ScaleController : MonoBehaviour
     private List<IngredientWorld> ingredientsWorldRight = new();
 
     private Draggable currentDraggable;
-    private IngredientsSpawner _spawner;
+    private IngredientsManager _spawner;
     
     public float Result
     {
@@ -124,7 +124,7 @@ public class ScaleController : MonoBehaviour
     
     private void Start()
     {
-        _spawner = FindObjectOfType<IngredientsSpawner>(); 
+        _spawner = FindObjectOfType<IngredientsManager>(); 
     }
 
     private void Update()
