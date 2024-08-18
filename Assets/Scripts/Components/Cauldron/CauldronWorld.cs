@@ -13,12 +13,14 @@ namespace Components.Cauldron
         public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
+        public ScaleController scaleController;
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;
 
         public void Mix()
         {
+            scaleController.Reset();
             DisableMixButton();
             AnimateStartMix();
         }
