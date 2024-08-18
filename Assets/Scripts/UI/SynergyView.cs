@@ -16,7 +16,8 @@ public class SynergyView : MonoBehaviour
     public void Init(Sinergy synergy)
     {
         this.synergy = synergy;
-        firstPartText.text = $">{this.synergy.amount} {(synergy.repeatable?"R":"")} {synergy.ingredient.name}";
+        targetIngredientImage.sprite = synergy.ingredient.IconSprite;
+        firstPartText.text = $">{this.synergy.amount} {(synergy.repeatable?"R":"")}";
         lastPartText.text = $" -> {this.synergy.weightAdded}p";
     }
 }

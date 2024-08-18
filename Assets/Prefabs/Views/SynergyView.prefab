@@ -417,9 +417,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -1397542295, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
   m_MinWidth: 64
-  m_MinHeight: -1
-  m_PreferredWidth: -1
-  m_PreferredHeight: -1
+  m_MinHeight: 64
+  m_PreferredWidth: 64
+  m_PreferredHeight: 64
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1

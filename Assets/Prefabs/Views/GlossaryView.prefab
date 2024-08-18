@@ -524,10 +524,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ingredients:
-  - {fileID: 11400000, guid: 7bcc872d3e78d4009971a9a25bd55305, type: 2}
-  - {fileID: 11400000, guid: b5b00a4a1f06c4157b41b59ba43f1193, type: 2}
-  - {fileID: 11400000, guid: 654c59263e10f4490a91f2a341096066, type: 2}
-  - {fileID: 11400000, guid: a4c5aeb7a2cd04d4b863dae7fad554d1, type: 2}
+  - {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
+  - {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
+  - {fileID: 11400000, guid: 7f07f2754dc68467481b8705ef5a0f11, type: 2}
+  - {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
+  - {fileID: 11400000, guid: fac68ae2510de4a8e870f93bd49cb205, type: 2}
+  - {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
+  - {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
   IngredientViewPrefab: {fileID: 8355776058847148930, guid: 3a92d7ed518704fe0ac578132159cc8c,
     type: 3}
   ingredientViewParent: {fileID: 5945482206637323043}
