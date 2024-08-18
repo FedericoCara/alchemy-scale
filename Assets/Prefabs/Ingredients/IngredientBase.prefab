@@ -91,6 +91,7 @@ MonoBehaviour:
   clampRect: {fileID: 11400000, guid: 4599f18f6dec34929bdd13cf27992036, type: 2}
   targetRigidbody: {fileID: 2822999165824957607}
   targetCamera: {fileID: 0}
+  followInputSpeed: 10
   useLocalPosition: 0
 --- !u!114 &2027689429741862208
 MonoBehaviour:
