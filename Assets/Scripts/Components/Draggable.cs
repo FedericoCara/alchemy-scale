@@ -13,9 +13,6 @@ namespace Components
         public bool Interactable { get { return interactable; } set { interactable = value; } }
 
         [SerializeField] 
-        private ClampRect clampRect;
-    
-        [SerializeField] 
         private Rigidbody targetRigidbody;
     
         [SerializeField]
@@ -47,7 +44,7 @@ namespace Components
 
         private void DragObject()
         {
-            Vector3 screenToWorldPoint = GetWorldPositionOnPlane(clampRect.Clamp(_lastDragEventData.position), transform.position.z);
+            Vector3 screenToWorldPoint = GetWorldPositionOnPlane(_lastDragEventData.position, transform.position.z);
             MoveTowards(screenToWorldPoint + startingOffset);
             Debug.Log("Dragging startingOffset-"+startingOffset+", mousePosition-"+_lastDragEventData.position+", screenToWorldPoint-"+screenToWorldPoint, gameObject);
             List<RaycastResult> resultAppendList = new List<RaycastResult>();
@@ -64,8 +61,8 @@ namespace Components
             if (!interactable) {
                 return;
             }
-
-            Vector3 screenToWorldPoint = GetWorldPositionOnPlane(clampRect.Clamp(eventData.position), transform.position.z);
+            _lastDragEventData = eventData;
+            Vector3 screenToWorldPoint = GetWorldPositionOnPlane(_lastDragEventData.position, transform.position.z);
             if (useLocalPosition) {
                 startingOffset = transform.localPosition - screenToWorldPoint;
             } else {
