@@ -347,6 +347,8 @@ GameObject:
   - component: {fileID: 331801838}
   - component: {fileID: 331801841}
   - component: {fileID: 331801842}
+  - component: {fileID: 331801844}
+  - component: {fileID: 331801843}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -488,6 +490,40 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   m_MaxRayIntersections: 0
+--- !u!95 &331801843
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331801837}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11bdd896911c04481a896818bb681048, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &331801844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331801837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ee6bc231004653bcd01ed07660179e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 331801843}
 --- !u!1001 &332799348
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -556,6 +592,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 996700192adbc924db308397ef9955af, type: 3}
+--- !u!114 &457425411 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 763748735027613507, guid: 996700192adbc924db308397ef9955af,
+    type: 3}
+  m_PrefabInstance: {fileID: 332799348}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e7d2ef1ffb24bb7b1ee70d1880efca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656129859
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1336966747
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1155,7 +1203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1336966749}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 457425411}
+        m_TargetAssemblyTypeName: Components.Cauldron.CauldronWorld, Assembly-CSharp
+        m_MethodName: Mix
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1336966749
 MonoBehaviour:
   m_ObjectHideFlags: 0

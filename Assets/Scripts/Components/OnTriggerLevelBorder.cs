@@ -20,6 +20,9 @@ namespace Components
                 _spawner!=null)
             {
                 transform.position = _spawner.GetNextSpawnPoint().position;
+                var rigidBody = transform.GetComponentInParent<Rigidbody>();
+                if(rigidBody!=null)
+                    rigidBody.velocity = Vector3.zero;
             }
         }
     }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Model;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -12,10 +13,11 @@ namespace Components
     {
         [SerializeField] private LevelManager levelManager;
         [SerializeField] private List<Transform> spawnPoints;
-        [SerializeField]private Transform spawnParent;
+        [SerializeField] private Transform spawnParent;
         [SerializeField] private List<IngredientWorld> ingredientPrefabs;
         [SerializeField] private float timeBetweenSpawns = 0.2f;
         [SerializeField] private float randomTimeBetweenSpawns = 0.05f;
+        [SerializeField] private float previewHeight = 10;
         private List<Transform> remainingSpawnPoints = new();
         private Dictionary<Ingredient, IngredientWorld> _ingredientDictionary;
 
@@ -54,6 +56,17 @@ namespace Components
             {
                 _ingredientDictionary.Add(ingredientPrefab.ingredient,ingredientPrefab);
             }
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            var position = transform.position;
+            var minX = spawnPoints.Min(spawnPoint => spawnPoint.position.x);
+            var maxX = spawnPoints.Max(spawnPoint => spawnPoint.position.x);
+            var centerX = minX + (maxX - minX)/2;
+            Gizmos.DrawWireCube(
+                new Vector3(centerX,position.y-previewHeight/2,position.z),
+                new Vector3(maxX - minX,previewHeight,0));
         }
     }
 }

@@ -4962,6 +4962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3063361600869461338}
   - component: {fileID: 763748735027613507}
+  - component: {fileID: 4633432956896541183}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -5002,6 +5003,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredients: []
+  levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
+  mixButton: {fileID: 0}
+  camAnimator: {fileID: 0}
+  cauldronAnimator: {fileID: 4633432956896541183}
+--- !u!114 &4633432956896541183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8985571455141533105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fae47f96cbd043aaa9a0596020a50963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1001 &7125291938152969447
 PrefabInstance:
   m_ObjectHideFlags: 0

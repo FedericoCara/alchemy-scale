@@ -244,7 +244,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1, y: 5.28, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 988735315077620039}
@@ -252,10 +252,10 @@ Transform:
   - {fileID: 6827043006643524734}
   - {fileID: 6800856727611260479}
   - {fileID: 472712134576227846}
-  - {fileID: 7841735580537181596}
-  - {fileID: 1146593768834230689}
-  - {fileID: 4387624961314048251}
   - {fileID: 3644401040513175766}
+  - {fileID: 4387624961314048251}
+  - {fileID: 1146593768834230689}
+  - {fileID: 7841735580537181596}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8471637936956146118
@@ -277,10 +277,10 @@ MonoBehaviour:
   - {fileID: 6827043006643524734}
   - {fileID: 6800856727611260479}
   - {fileID: 472712134576227846}
-  - {fileID: 7841735580537181596}
-  - {fileID: 1146593768834230689}
-  - {fileID: 4387624961314048251}
   - {fileID: 3644401040513175766}
+  - {fileID: 4387624961314048251}
+  - {fileID: 1146593768834230689}
+  - {fileID: 7841735580537181596}
   spawnParent: {fileID: 0}
   ingredientPrefabs:
   - {fileID: 4828391449772708305, guid: c165da2e586924f34959e1c9ceeac36c, type: 3}
@@ -289,6 +289,7 @@ MonoBehaviour:
   - {fileID: 7734570187469280706, guid: 103a6b0edbec94349b78dbc00a8d9eee, type: 3}
   timeBetweenSpawns: 0.1
   randomTimeBetweenSpawns: 0.05
+  previewHeight: 3
 --- !u!1 &8324720146793405539
 GameObject:
   m_ObjectHideFlags: 0
