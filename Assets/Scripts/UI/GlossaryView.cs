@@ -10,21 +10,27 @@ public class GlossaryView : MonoBehaviour
     [SerializeField] private List<Ingredient> Ingredients;
     [SerializeField] private IngredientView IngredientViewPrefab;
     [SerializeField] private Transform ingredientViewParent;
-    private List<IngredientView> IngredientViews;
+    private List<IngredientView> ingredientViews = new();
 
-    private void Start()
+    private void OnEnable()
     {
         Init();
     }
 
     public void Init()
     {
-        IngredientViews = new List<IngredientView>();
+        ingredientViews.ForEach(view => Destroy(view.gameObject));
+        ingredientViews.Clear();
         foreach (var ingredient in Ingredients)
         {
+            if (!GameManager.glossary.IsUnlocked(ingredient))
+            {
+                continue;
+            }
+            
             var ingredientView = Instantiate(IngredientViewPrefab, ingredientViewParent);
             ingredientView.Init(ingredient);
-            IngredientViews.Add(ingredientView);
+            ingredientViews.Add(ingredientView);
         }
     }
 }

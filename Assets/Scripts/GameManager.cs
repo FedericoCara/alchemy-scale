@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Components;
 using Model;
 using UnityEngine;
@@ -10,8 +11,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject successGO;
     [SerializeField] private GameObject failGO;
 
+    public static Glossary glossary = new Glossary();
+
     public void SetSuccess()
     {
+        levelManager.CurrentLevel.startingIngredients.ForEach(item => glossary.UnlockWeight(item.ingredient));
         var nextLevel = levelManager.GetAndSetNextLevel();
         if (nextLevel == null)
         {
@@ -19,6 +23,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+        nextLevel.startingIngredients.ForEach(item => glossary.Unlock(item.ingredient));
         successGO.SetActive(true);
         ingredientsManager.RestartIngredients();
     }

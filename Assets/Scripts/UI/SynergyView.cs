@@ -16,8 +16,20 @@ public class SynergyView : MonoBehaviour
     public void Init(Sinergy synergy)
     {
         this.synergy = synergy;
-        targetIngredientImage.sprite = synergy.ingredient.IconSprite;
-        firstPartText.text = $">{this.synergy.amount} {(synergy.repeatable?"R":"")}";
+        
+        if (!GameManager.glossary.IsUnlocked(synergy))
+        {
+            targetIngredientImage.gameObject.SetActive(false);
+            firstPartText.text = $"??";
+        }
+        else
+        {
+            targetIngredientImage.sprite = synergy.ingredient.IconSprite;
+            firstPartText.text = $">{this.synergy.amount} {(synergy.repeatable?"R":"")}";
+        }
+        
         lastPartText.text = $" -> {this.synergy.weightAdded}p";
+        
+
     }
 }

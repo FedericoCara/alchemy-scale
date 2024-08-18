@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Model;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 namespace UI
@@ -22,7 +21,7 @@ namespace UI
             this.ingredient = ingredient;
 
             ingredientNameText.text = ingredient.name;
-            ingredientWeightText.text = ingredient.Weight.ToString();
+            ingredientWeightText.text = GameManager.glossary.IsUnlockedWeight(ingredient)?ingredient.Weight+"p":"??";
             ingredientImage.sprite = ingredient.IconSprite;
             
             synergiesViews = new List<SynergyView>();

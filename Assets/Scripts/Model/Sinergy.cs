@@ -23,6 +23,7 @@ namespace Model
                     matchesCount++;
                     if (matchesCount >= amount)
                     {
+                        GameManager.glossary.Unlock(this);
                         matchesCount = 0;
                         addedWeight += weightAdded;
                         if (!repeatable)
