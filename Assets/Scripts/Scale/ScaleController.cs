@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Components;
 using Model;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ScaleController : MonoBehaviour
@@ -16,6 +17,9 @@ public class ScaleController : MonoBehaviour
 
     private List<IngredientWorld> ingredientsWorldLeft = new ();
     private List<IngredientWorld> ingredientsWorldRight = new();
+
+    private Draggable currentDraggable;
+    private IngredientsSpawner _spawner;
     
     public float Result
     {
@@ -43,9 +47,11 @@ public class ScaleController : MonoBehaviour
         {
             return;
         }
-        
-        //ToDo move ingredient to position leftPositions[ingredientsLeft.Count]
-        
+
+        ingredient.transform.position = leftPositions[ingredientsWorldLeft.Count].position;
+        ingredient.transform.parent = leftPositions[ingredientsWorldLeft.Count];
+        ingredient.GetComponent<Rigidbody>().isKinematic = true;
+
         ingredientsWorldLeft.Add(ingredient);
         CalcResult();
         onTouchLeft?.Invoke();
@@ -58,8 +64,10 @@ public class ScaleController : MonoBehaviour
             return;
         }
         
-        //ToDo move ingredient to position rightPositions[ingredientsRight.Count]
-        
+        ingredient.transform.position = rightPositions[ingredientsWorldRight.Count].position;
+        ingredient.transform.parent = rightPositions[ingredientsWorldRight.Count];
+        ingredient.GetComponent<Rigidbody>().isKinematic = true;
+            
         ingredientsWorldRight.Add(ingredient);
         CalcResult();
         onTouchRight?.Invoke();
@@ -79,9 +87,33 @@ public class ScaleController : MonoBehaviour
 
     public void Reset()
     {
-        //ToDo Reset Ingredients
+        foreach (var ingredientWorld in ingredientsWorldLeft)
+        {
+            ResetIngredientPosition(ingredientWorld);
+        }
+        
+        foreach (var ingredientWorld in ingredientsWorldRight)
+        {
+            ResetIngredientPosition(ingredientWorld);
+        }
+        
         ingredientsWorldLeft.Clear();
         ingredientsWorldRight.Clear();
+        
+        CalcResult();
+    }
+    private void ResetIngredientPosition(IngredientWorld ingredientWorld)
+    {
+        ingredientWorld.transform.position = _spawner.GetNextSpawnPoint().position;
+        var rigidBody = ingredientWorld.transform.GetComponentInParent<Rigidbody>();
+        if (rigidBody != null)
+        {
+            rigidBody.isKinematic = false;
+            rigidBody.velocity = Vector3.zero;
+        }
+        ingredientWorld.transform.parent = null;
+        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
+        draggable.Interactable = true;
     }
 
     private void Awake()
@@ -90,6 +122,19 @@ public class ScaleController : MonoBehaviour
         onTouchRight += OnTouchRight;
     }
     
+    private void Start()
+    {
+        _spawner = FindObjectOfType<IngredientsSpawner>(); 
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reset();
+        }
+    }
+
     private void OnTouchRight()
     {
         animator.SetTrigger("TouchRight");
@@ -98,5 +143,56 @@ public class ScaleController : MonoBehaviour
     private void OnTouchLeft()
     {
         animator.SetTrigger("TouchLeft");
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.transform.parent == null)
+        {
+            return;
+        }
+        
+        var parentGameObject = other.gameObject.transform.parent.gameObject;
+        var draggable = parentGameObject.GetComponent<Draggable>();
+        if (draggable.isDragging)
+        {
+            currentDraggable = draggable;
+            currentDraggable.OnDragEndListener += OnDropIngredient;
+        }
+    }
+    
+    private void OnDropIngredient(Draggable draggable)
+    {
+        var ingredientWorld = draggable.gameObject.GetComponent<IngredientWorld>();
+        if (IsOnLeft(ingredientWorld))
+        {
+            AddIngredientLeft(ingredientWorld);
+        }
+        else
+        {
+            AddIngredientRight(ingredientWorld);
+        }
+        draggable.Interactable = false;
+    }
+    
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.transform.parent == null)
+        {
+            return;
+        }
+        
+        var parentGameObject = other.gameObject.transform.parent.gameObject;
+        var draggable = parentGameObject.GetComponent<Draggable>();
+        if (draggable == currentDraggable)
+        {
+            currentDraggable.OnDragEndListener -= OnDropIngredient;
+            currentDraggable = null;
+        }
+    }
+
+    private bool IsOnLeft(IngredientWorld ingredientWorld)
+    {
+        return ingredientWorld.transform.position.x > transform.position.x; // rotated 180
     }
 }

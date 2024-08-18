@@ -25,8 +25,12 @@ namespace Components
         private bool useLocalPosition = true;
 
         private Vector3 startingOffset;
-        private bool _dragging;
         private PointerEventData _lastDragEventData;
+        
+        private bool _dragging;
+        public bool isDragging => _dragging;
+
+        public event Action<Draggable> OnDragEndListener;
 
 
         void Start() {
@@ -46,7 +50,7 @@ namespace Components
         {
             Vector3 screenToWorldPoint = GetWorldPositionOnPlane(_lastDragEventData.position, transform.position.z);
             MoveTowards(screenToWorldPoint + startingOffset);
-            Debug.Log("Dragging startingOffset-"+startingOffset+", mousePosition-"+_lastDragEventData.position+", screenToWorldPoint-"+screenToWorldPoint, gameObject);
+            //Debug.Log("Dragging startingOffset-"+startingOffset+", mousePosition-"+_lastDragEventData.position+", screenToWorldPoint-"+screenToWorldPoint, gameObject);
             List<RaycastResult> resultAppendList = new List<RaycastResult>();
             targetCamera.GetComponent<PhysicsRaycaster>().Raycast(_lastDragEventData, resultAppendList);
             OnDraggedOver(_lastDragEventData, resultAppendList);
@@ -94,6 +98,7 @@ namespace Components
         {
             targetRigidbody.useGravity = true;
             _dragging = false;
+            OnDragEndListener?.Invoke(this);
         }
     }
 }
