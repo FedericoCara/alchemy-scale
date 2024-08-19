@@ -4894,6 +4894,53 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &1326805248084195230
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1945354739205262190}
+  - component: {fileID: 6005785923216822447}
+  m_Layer: 0
+  m_Name: PotionSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1945354739205262190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326805248084195230}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3063361600869461338}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6005785923216822447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326805248084195230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 596ba1676b8945a48aab08956feacb01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
+  parent: {fileID: 1945354739205262190}
+  delayUntilHide: 2
 --- !u!1 &7231137493049809633
 GameObject:
   m_ObjectHideFlags: 0
@@ -9838,6 +9885,7 @@ Transform:
   - {fileID: 8570268932134772125}
   - {fileID: 7764136727714930336}
   - {fileID: 7245706750054721985}
+  - {fileID: 1945354739205262190}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &763748735027613507
@@ -9861,7 +9909,8 @@ MonoBehaviour:
   cauldronAnimator: {fileID: 4633432956896541183}
   cauldronPreview: {fileID: 0}
   scaleController: {fileID: 0}
-  resetCamTime: 3
+  potionSpawner: {fileID: 6005785923216822447}
+  resetCamTime: 3.5
 --- !u!114 &4633432956896541183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9875,10 +9924,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cauldronSpinWater: {fileID: 242740523919797334}
-  mixTime: 2
+  mixTime: 2.5
   waterRenderer: {fileID: 7396206858352617202}
-  blackWaterDelay: 0.5
-  blackWaterDuration: 1
+  blackWaterDelay: 0
+  blackWaterDuration: 0.5
   blackWaterColor: {r: 0, g: 0.078431375, b: 0, a: 1}
   successWaterColor: {r: 0, g: 1, b: 0, a: 1}
   clearWaterColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10101,9 +10150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: [{targetCorrespondingSourceObject: {fileID: -8679921383154817045,
-          guid: 005b2273ece9e8142a1b646f42901fdd, type: 3}, insertIndex: -1, addedObject: {
-          fileID: 4428243320230474197}}]
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 005b2273ece9e8142a1b646f42901fdd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4428243320230474197}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 005b2273ece9e8142a1b646f42901fdd,
         type: 3}

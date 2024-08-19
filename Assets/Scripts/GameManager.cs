@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private IngredientsManager ingredientsManager;
     [SerializeField] private TutorialController tutorialController;
-    [SerializeField] private GameObject successGO;
-    [SerializeField] private GameObject failGO;
 
     public static Glossary glossary = new Glossary();
 
@@ -43,13 +41,11 @@ public class GameManager : MonoBehaviour
         }
 
         nextLevel.startingIngredients.ForEach(item => glossary.Unlock(item.ingredient));
-        successGO.SetActive(true);
         ingredientsManager.RestartIngredients();
     }
 
     public void SetFail()
     {
-        failGO.SetActive(true);
         ingredientsManager.RestartIngredients();
     }
 }
