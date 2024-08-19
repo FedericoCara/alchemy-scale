@@ -24,6 +24,12 @@ namespace Components.Cauldron
         private void OnEnable()
         {
             DisableMixButton();
+            EnableCauldronPreview(false);
+        }
+
+        private void EnableCauldronPreview(bool enabled)
+        {
+            cauldronPreview.gameObject.SetActive(enabled);
         }
 
         public void Mix()
@@ -37,6 +43,7 @@ namespace Components.Cauldron
         {
             ingredients.Add(ingredient.ingredient);
             cauldronPreview.Add(ingredient.ingredient);
+            EnableCauldronPreview(true);
             ingredient.gameObject.SetActive(false);
             EnableMixButton();
         }
@@ -72,6 +79,7 @@ namespace Components.Cauldron
         {
             cauldronPreview.Clear();
             ingredients.Clear();
+            EnableCauldronPreview(false);
         }
 
         public void OnFeedbackFinished()
