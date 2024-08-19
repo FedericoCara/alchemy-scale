@@ -104,7 +104,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -277,7 +277,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 0, g: 0.078431375, b: 0, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1042,16 +1042,16 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.58333397
+          inSlope: 0.37257347
+          outSlope: 0.37257347
           tangentMode: 34
           weightedMode: 0
           inWeight: 0
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.9207383
-          value: 1
+          time: 0.9585801
+          value: 0.94047546
           inSlope: -0.16918057
           outSlope: -8.721443
           tangentMode: 1
@@ -1061,11 +1061,11 @@ ParticleSystem:
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: -12.61643
-          outSlope: -12.61643
-          tangentMode: 34
+          inSlope: -110.16044
+          outSlope: -110.16044
+          tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.036526978
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4920,17 +4920,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6773196462877471680}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0.606}
+  m_LocalRotation: {x: -0, y: -0.99941975, z: -0, w: 0.03406091}
+  m_LocalPosition: {x: 0, y: 0, z: 0.599}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 17478978098416787}
   m_Father: {fileID: 3063361600869461338}
-  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -176.096, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.19, y: 0.517}
+  m_AnchoredPosition: {x: 0.288, y: 0.517}
   m_SizeDelta: {x: 124.3786, y: 103.3752}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4162764144977469284
@@ -5973,7 +5973,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -5986,20 +5986,29 @@ ParticleSystem:
           time: 0
           value: 0
           inSlope: 0
-          outSlope: 1
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 1
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.9470591
+          value: 0.9444445
+          inSlope: 0.47208825
+          outSlope: 0.046841677
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.09902078
+          outWeight: 0.49620172
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -69.50735
+          outSlope: -14.8301
+          tangentMode: 1
+          weightedMode: 0
+          inWeight: 0.057154857
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -6133,7 +6142,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 1
+    separateAxes: 0
   RotationModule:
     enabled: 1
     x:
@@ -9861,7 +9870,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.3, y: -4.5}
+  m_AnchoredPosition: {x: 16.9, y: -4.5}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &7382312527104721216
@@ -10029,8 +10038,7 @@ MonoBehaviour:
   cauldronAnimator: {fileID: 4633432956896541183}
   cauldronPreview: {fileID: 1701210419240072110}
   scaleController: {fileID: 0}
-  mixTime: 4
-  resetCamTime: 6
+  resetCamTime: 3
 --- !u!114 &4633432956896541183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10044,6 +10052,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cauldronSpinWater: {fileID: 242740523919797334}
+  mixTime: 2
+  waterRenderer: {fileID: 7396206858352617202}
+  blackWaterDelay: 0.5
+  blackWaterDuration: 1
+  blackWaterColor: {r: 0, g: 0.078431375, b: 0, a: 1}
+  clearWaterColor: {r: 1, g: 1, b: 1, a: 1}
+  boilingBubbles: {fileID: 6435958473835747191}
 --- !u!1001 &7125291938152969447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10195,6 +10210,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 242740523919797334}
   m_SourcePrefab: {fileID: 100100000, guid: 005b2273ece9e8142a1b646f42901fdd, type: 3}
+--- !u!23 &7396206858352617202 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 005b2273ece9e8142a1b646f42901fdd,
+    type: 3}
+  m_PrefabInstance: {fileID: 8170953947012987510}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8570268932134772125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 005b2273ece9e8142a1b646f42901fdd,

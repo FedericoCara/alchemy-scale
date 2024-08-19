@@ -906,11 +906,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 17478978098416787, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 16.9
-      objectReference: {fileID: 0}
     - target: {fileID: 763748735027613507, guid: 996700192adbc924db308397ef9955af,
         type: 3}
       propertyPath: mixButton
@@ -928,6 +923,11 @@ PrefabInstance:
       objectReference: {fileID: 775588171}
     - target: {fileID: 763748735027613507, guid: 996700192adbc924db308397ef9955af,
         type: 3}
+      propertyPath: resetCamTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 763748735027613507, guid: 996700192adbc924db308397ef9955af,
+        type: 3}
       propertyPath: scaleController
       value: 
       objectReference: {fileID: 1990431792}
@@ -936,40 +936,10 @@ PrefabInstance:
       propertyPath: ingredientsManager
       value: 
       objectReference: {fileID: 631970276}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
+    - target: {fileID: 995155000581601709, guid: 996700192adbc924db308397ef9955af,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.599
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.03406091
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.99941975
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.288
-      objectReference: {fileID: 0}
-    - target: {fileID: 2831152174687088464, guid: 996700192adbc924db308397ef9955af,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -176.096
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3063361600869461338, guid: 996700192adbc924db308397ef9955af,
         type: 3}
@@ -1021,11 +991,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7396206858352617202, guid: 996700192adbc924db308397ef9955af,
+    - target: {fileID: 4633432956896541183, guid: 996700192adbc924db308397ef9955af,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: df13c318adea0bc4d891281d0c267dd3, type: 2}
+      propertyPath: mixTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633432956896541183, guid: 996700192adbc924db308397ef9955af,
+        type: 3}
+      propertyPath: blackWaterDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4633432956896541183, guid: 996700192adbc924db308397ef9955af,
+        type: 3}
+      propertyPath: blackWaterDuration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6435958473835747191, guid: 996700192adbc924db308397ef9955af,
+        type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8985571455141533105, guid: 996700192adbc924db308397ef9955af,
         type: 3}
       propertyPath: m_Name

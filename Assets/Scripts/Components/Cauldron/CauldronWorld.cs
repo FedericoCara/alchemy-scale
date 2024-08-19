@@ -16,7 +16,6 @@ namespace Components.Cauldron
         public CauldronAnimator cauldronAnimator;
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
-        public float mixTime = 5;
         public float resetCamTime = 7;
 
         private Model.Cauldron _cauldron = new();
@@ -50,15 +49,13 @@ namespace Components.Cauldron
         public void OnAnimateStartFinished()
         {
             _lastMixResult = _cauldron.Mix(ingredients);
-            cauldronAnimator.AnimateSpin();
+            cauldronAnimator.AnimateSpin(IsSuccess(_lastMixResult), StopCauldron);
             ingredientsManager.ClearIngredients();
-            Invoke(nameof(StopCauldron), mixTime);
             Invoke(nameof(OnFeedbackFinished), resetCamTime);
         }
 
         private void StopCauldron()
         {
-            cauldronAnimator.StopSpinning();
             EmptyIngredients();
             if (IsSuccess(_lastMixResult))
             {

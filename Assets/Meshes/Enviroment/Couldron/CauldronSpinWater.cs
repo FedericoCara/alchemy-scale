@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Meshes.Enviroment
@@ -7,7 +8,7 @@ namespace Meshes.Enviroment
         [SerializeField] private float spinMaxSpeed = 30;
         private float spinSpeed = 0;
         private bool spinning;
-    
+
         void Update()
         {
             spinSpeed = Mathf.Lerp(spinSpeed, spinning ? spinMaxSpeed : 0, Time.deltaTime);
