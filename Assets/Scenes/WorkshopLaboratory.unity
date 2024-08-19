@@ -12669,6 +12669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scale
       objectReference: {fileID: 0}
+    - target: {fileID: 8321632730236521715, guid: 5695cd87cb0aa4c078390a17f63d40eb,
+        type: 3}
+      propertyPath: resetScaleButton
+      value: 
+      objectReference: {fileID: 226667133}
     - target: {fileID: 8654178055445324280, guid: 5695cd87cb0aa4c078390a17f63d40eb,
         type: 3}
       propertyPath: m_LocalPosition.x

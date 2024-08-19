@@ -10,6 +10,7 @@ public class ScaleController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private List<Transform> leftPositions;
     [SerializeField] private List<Transform> rightPositions;
+    [SerializeField] private GameObject resetScaleButton;
 
     private event Action onTouchLeft;
     private event Action onTouchRight;
@@ -101,6 +102,7 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldRight.Clear();
         
         CalcResult();
+        EnableResetButton(false);
     }
     private void ResetIngredientPosition(IngredientWorld ingredientWorld)
     {
@@ -125,6 +127,7 @@ public class ScaleController : MonoBehaviour
     private void Start()
     {
         _spawner = FindObjectOfType<IngredientsManager>(); 
+        EnableResetButton(false);
     }
 
     private void Update()
@@ -173,8 +176,9 @@ public class ScaleController : MonoBehaviour
             AddIngredientRight(ingredientWorld);
         }
         draggable.Interactable = false;
+        EnableResetButton(true);
     }
-    
+
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.transform.parent == null)
@@ -194,5 +198,10 @@ public class ScaleController : MonoBehaviour
     private bool IsOnLeft(IngredientWorld ingredientWorld)
     {
         return ingredientWorld.transform.position.x > transform.position.x; // rotated 180
+    }
+
+    private void EnableResetButton(bool enabled)
+    {
+        resetScaleButton.SetActive(enabled);
     }
 }

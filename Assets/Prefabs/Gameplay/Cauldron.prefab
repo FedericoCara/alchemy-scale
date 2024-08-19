@@ -5188,6 +5188,8 @@ MonoBehaviour:
   cauldronAnimator: {fileID: 4633432956896541183}
   cauldronPreview: {fileID: 1701210419240072110}
   scaleController: {fileID: 0}
+  mixTime: 4
+  resetCamTime: 6
 --- !u!114 &4633432956896541183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5376,4 +5378,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4100b321f813a407597b79f5c2deb79d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinMaxSpeed: 90
+  spinMaxSpeed: 150

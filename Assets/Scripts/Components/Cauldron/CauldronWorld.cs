@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Model;
 using UnityEngine;
@@ -15,9 +16,16 @@ namespace Components.Cauldron
         public CauldronAnimator cauldronAnimator;
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
+        public float mixTime = 5;
+        public float resetCamTime = 7;
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;
+
+        private void OnEnable()
+        {
+            DisableMixButton();
+        }
 
         public void Mix()
         {
@@ -31,12 +39,7 @@ namespace Components.Cauldron
             ingredients.Add(ingredient.ingredient);
             cauldronPreview.Add(ingredient.ingredient);
             ingredient.gameObject.SetActive(false);
-        }
-
-        private void DisableMixButton()
-        {
-            if (mixButton != null)
-                mixButton.gameObject.SetActive(false);
+            EnableMixButton();
         }
 
         private void AnimateStartMix()
@@ -49,8 +52,8 @@ namespace Components.Cauldron
             _lastMixResult = _cauldron.Mix(ingredients);
             cauldronAnimator.AnimateSpin();
             ingredientsManager.ClearIngredients();
-            Invoke(nameof(StopCauldron), 3);
-            Invoke(nameof(OnFeedbackFinished), 5);
+            Invoke(nameof(StopCauldron), mixTime);
+            Invoke(nameof(OnFeedbackFinished), resetCamTime);
         }
 
         private void StopCauldron()
@@ -77,8 +80,18 @@ namespace Components.Cauldron
         public void OnFeedbackFinished()
         {
             camAnimator.ReturnToMainPosition();
+        }
+
+        private void EnableMixButton()
+        {
             if (mixButton != null)
                 mixButton.gameObject.SetActive(true);
+        }
+
+        private void DisableMixButton()
+        {
+            if (mixButton != null)
+                mixButton.gameObject.SetActive(false);
         }
 
         private bool IsSuccess(MixResult result)
