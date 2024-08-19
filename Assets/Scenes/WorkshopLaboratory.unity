@@ -3836,6 +3836,7 @@ GameObject:
   - component: {fileID: 806443394}
   - component: {fileID: 806443393}
   - component: {fileID: 806443392}
+  - component: {fileID: 806443396}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3935,6 +3936,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &806443396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806443391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a5c274a345948d68ab1aa1afefc4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
+  glossaryButton: {fileID: 45394521}
 --- !u!1 &808891446
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,7 +5346,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 32.45278, y: -166.23154, z: 0.5423431}
 --- !u!114 &1039443888
 MonoBehaviour:
   m_ObjectHideFlags: 0
