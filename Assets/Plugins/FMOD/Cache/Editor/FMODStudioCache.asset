@@ -69,7 +69,7 @@ MonoBehaviour:
   Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638597132419323240
+  lastModified: 638597144252085214
   FileSizes:
   - Name: Desktop
     Value: 1208
@@ -233,7 +233,7 @@ MonoBehaviour:
   - {fileID: 2614607455485663201}
   StringsBanks:
   - {fileID: -5734567034680690393}
-  cacheTime: 638597132419323240
+  cacheTime: 638597144252085214
   cacheVersion: 131619
 --- !u!114 &2614607455485663201
 MonoBehaviour:
@@ -250,7 +250,7 @@ MonoBehaviour:
   Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638597132419298125
+  lastModified: 638597144252065095
   FileSizes:
   - Name: Desktop
     Value: 1039168
