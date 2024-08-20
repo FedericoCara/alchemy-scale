@@ -183,7 +183,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 995732516951350192}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -5575891042172858556}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!4 &1337481738152618076 stripped
 Transform:
@@ -191,3 +195,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1900492354284124363}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7937083608615930563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+    type: 3}
+  m_PrefabInstance: {fileID: 1900492354284124363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-5575891042172858556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7937083608615930563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 345825932
+      Data2: 1087915735
+      Data3: -1725473138
+      Data4: 1612274006
+    Path: event:/drop_tentacle
+  Event: 
+  PlayEvent: 7
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
