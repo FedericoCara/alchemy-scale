@@ -18,6 +18,7 @@ namespace Components.Cauldron
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
         public PotionSpawner potionSpawner;
+        public CauldronButtonController cauldronButtonController;
         public float resetCamTime = 7;
         
 
@@ -98,14 +99,12 @@ namespace Components.Cauldron
 
         private void EnableMixButton()
         {
-            if (mixButton != null)
-                mixButton.gameObject.SetActive(true);
+            cauldronButtonController.Interactable = true;
         }
 
         private void DisableMixButton()
         {
-            if (mixButton != null)
-                mixButton.gameObject.SetActive(false);
+            cauldronButtonController.Interactable = false;
         }
 
         private bool IsSuccess(MixResult result)

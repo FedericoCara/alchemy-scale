@@ -9910,6 +9910,7 @@ MonoBehaviour:
   cauldronPreview: {fileID: 0}
   scaleController: {fileID: 0}
   potionSpawner: {fileID: 6005785923216822447}
+  cauldronButtonController: {fileID: 4323637920294902210}
   resetCamTime: 3.5
 --- !u!114 &4633432956896541183
 MonoBehaviour:
@@ -9998,8 +9999,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b692afc182cc71c4c929ab82f45a82ef,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 302894682515277433}
   m_SourcePrefab: {fileID: 100100000, guid: b692afc182cc71c4c929ab82f45a82ef, type: 3}
+--- !u!1 &3909009552290687855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b692afc182cc71c4c929ab82f45a82ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 4251115112970589758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &302894682515277433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3909009552290687855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &4428243320230474197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b692afc182cc71c4c929ab82f45a82ef,
@@ -10077,7 +10106,19 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 740011127913364267}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4323637920294902210}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3885342263321487726}
   m_SourcePrefab: {fileID: 100100000, guid: 2709b38bc5e86a8458c89c64ab6ab81a, type: 3}
 --- !u!4 &7307273160497468172 stripped
 Transform:
@@ -10085,6 +10126,67 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7125291938152969447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7936317354076719542 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7125291938152969447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &740011127913364267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936317354076719542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 4
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
+--- !u!114 &4323637920294902210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936317354076719542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10551089c46d9c44e8bd780d62c6aea1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlines:
+  - {fileID: 740011127913364267}
+  - {fileID: 302894682515277433}
+  cauldronWorld: {fileID: 763748735027613507}
+--- !u!135 &3885342263321487726
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936317354076719542}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.8
+  m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!1001 &8170953947012987510
 PrefabInstance:
   m_ObjectHideFlags: 0
