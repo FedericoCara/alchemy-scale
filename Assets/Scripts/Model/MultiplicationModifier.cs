@@ -7,5 +7,6 @@ namespace Model
     public class MultiplicationModifier : Ingredient
     {
         public override int CalculateWeight(List<Ingredient> previousIngredients) => Weight;
+        public override bool HasSynergy(List<Ingredient> previousIngredients) => false;
     }
 }

@@ -1,3 +1,4 @@
+using Components.Ingredients;
 using Model;
 using UnityEngine;
 using UnityEngine.Serialization;
