@@ -11,6 +11,8 @@ public class SynergyView : MonoBehaviour
     [SerializeField] private Image ingredientImage;
     [SerializeField] private Image targetIngredientImage;
     [SerializeField] private Sprite unknownIngredientSprite;
+    [SerializeField] private GameObject simpleTextGroup;
+    [SerializeField] private GameObject repetitiveTextGroup;
     
     private Sinergy synergy;
     
@@ -29,6 +31,9 @@ public class SynergyView : MonoBehaviour
         ingredientImage.sprite = GameManager.glossary.IsUnlocked(ingredient) 
             ? ingredient.IconSprite 
             : unknownIngredientSprite;
+        
+        repetitiveTextGroup.SetActive(this.synergy.repeatable);
+        simpleTextGroup.SetActive(!this.synergy.repeatable);
         
 
     }

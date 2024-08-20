@@ -22,3 +22,4 @@ MonoBehaviour:
   targetWeight: 60
   targetPotion: {fileID: 2295640194525280234, guid: 22e9c9596e2f4c84aa13b2c326ae4cfa,
     type: 3}
+  targetPotionIcon: {fileID: 21300000, guid: de7be7dbd27b2a14f9a7f2e0f7b74d25, type: 3}
