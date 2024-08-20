@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Components.Ingredients;
-using DG.Tweening;
 using Model;
 using UnityEngine;
 using FMODUnity;
@@ -15,15 +14,13 @@ namespace Components.Cauldron
         public LevelManager levelManager;
         public IngredientsManager ingredientsManager;
         public GameManager gameManager;
-        public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
         public PotionSpawner potionSpawner;
         public CauldronButtonController cauldronButtonController;
-        public float resetCamTime = 7;
-        
+
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;

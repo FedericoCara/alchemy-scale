@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Meshes.Enviroment
+namespace Meshes.Environment.Cauldron
 {
     public class CauldronSpinWater : MonoBehaviour
     {
