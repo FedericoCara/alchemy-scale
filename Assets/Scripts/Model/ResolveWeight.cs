@@ -11,6 +11,7 @@ namespace Model
             OperatorMode operatorMode = OperatorMode.SUM;
             foreach (var ingredient in ingredients)
             {
+                var previousMode = operatorMode;
                 operatorMode = HandleOperator(operatorMode, ingredient);
                 switch (operatorMode)
                 {
@@ -19,6 +20,10 @@ namespace Model
                         break;
                     case OperatorMode.SUBTRACT:
                         totalWeight -= ingredient.CalculateWeight(previousIngredients);
+                        break;
+                    case OperatorMode.MULTIPLICATION:
+                        totalWeight *= ingredient.CalculateWeight(previousIngredients);
+                        operatorMode = previousMode;
                         break;
                 }
                 previousIngredients.Add(ingredient);
@@ -31,13 +36,16 @@ namespace Model
         {
             if (ingredient is SubtractionModifier)
                 return OperatorMode.SUBTRACT;
+            if (ingredient is MultiplicationModifier)
+                return OperatorMode.MULTIPLICATION;
             return currentOperator;
         }
 
         private enum OperatorMode
         {
             SUM,
-            SUBTRACT
+            SUBTRACT,
+            MULTIPLICATION
         }
     }
 }
