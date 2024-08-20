@@ -388,10 +388,10 @@ MonoBehaviour:
   m_Name: FMODStudioSettings
   m_EditorClassIdentifier: 
   switchSettingsMigration: 1
-  HasSourceProject: 0
-  HasPlatforms: 0
-  sourceProjectPath: ../_alchemy-scale-music/alchemy fmod/alchemy fmod.fspro
-  sourceBankPath: ../_alchemy-scale-music/alchemy fmod/Build
+  HasSourceProject: 1
+  HasPlatforms: 1
+  sourceProjectPath: FMODProject/alchemy fmod.fspro
+  sourceBankPath: FMODProject/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -413,9 +413,9 @@ MonoBehaviour:
   RealChannelSettings: []
   Plugins: []
   MasterBanks:
-  - Master
+  - Desktop/Master
   Banks:
-  - Music
+  - Desktop/Music
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0

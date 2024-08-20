@@ -19,7 +19,7 @@ MonoBehaviour:
     Data3: 281255074
     Data4: 811217466
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -46,7 +46,7 @@ MonoBehaviour:
     Data3: 2043813811
     Data4: -268980318
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -54,7 +54,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &-5734567034680690393
+--- !u!114 &-3060647481090234173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,15 +64,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/Desktop/Music.bank
   m_EditorClassIdentifier: 
-  Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638597163273415394
-  FileSizes:
-  - Name: Desktop
-    Value: 1208
+  Path: FMODProject/Build/Desktop/Music.bank
+  Name: Desktop/Music
+  StudioPath: bank:/Music
+  lastModified: 638597173667163371
+  FileSizes: []
   Exists: 1
 --- !u!114 &-2867199559271984124
 MonoBehaviour:
@@ -93,7 +91,7 @@ MonoBehaviour:
     Data3: 1118529467
     Data4: 1157468780
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -120,7 +118,7 @@ MonoBehaviour:
     Data3: 804300433
     Data4: 1902319949
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -147,7 +145,7 @@ MonoBehaviour:
     Data3: -1725473138
     Data4: 1612274006
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -174,7 +172,7 @@ MonoBehaviour:
     Data3: 654122677
     Data4: -1919087205
   Banks:
-  - {fileID: -965185527728591318}
+  - {fileID: -3060647481090234173}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -182,7 +180,7 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 177192
---- !u!114 &-965185527728591318
+--- !u!114 &-2019044560482348537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -192,15 +190,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Music.bank
+  m_Name: bank:/Desktop/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Music.bank
-  Name: Music
-  StudioPath: bank:/Music
-  lastModified: 638597163312770558
+  Path: FMODProject/Build/Desktop/Master.strings.bank
+  Name: Desktop/Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638597173627267833
   FileSizes:
-  - Name: Desktop
-    Value: 2503296
+  - Name: 
+    Value: 1208
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -215,9 +213,9 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -5734567034680690393}
-  - {fileID: 2614607455485663201}
-  - {fileID: -965185527728591318}
+  - {fileID: -2019044560482348537}
+  - {fileID: 2003637200096538098}
+  - {fileID: -3060647481090234173}
   EditorEvents:
   - {fileID: -2500260895558969653}
   - {fileID: 6063453802541431307}
@@ -230,12 +228,12 @@ MonoBehaviour:
   - {fileID: 5128493978140765270}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   StringsBanks:
-  - {fileID: -5734567034680690393}
-  cacheTime: 638597163312770558
+  - {fileID: -2019044560482348537}
+  cacheTime: 638597173667163371
   cacheVersion: 131619
---- !u!114 &2614607455485663201
+--- !u!114 &2003637200096538098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,15 +243,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Desktop/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.bank
-  Name: Master
+  Path: FMODProject/Build/Desktop/Master.bank
+  Name: Desktop/Master
   StudioPath: bank:/Master
-  lastModified: 638597163273405337
-  FileSizes:
-  - Name: Desktop
-    Value: 1039008
+  lastModified: 638597173627262468
+  FileSizes: []
   Exists: 1
 --- !u!114 &3753081364336699034
 MonoBehaviour:
@@ -274,7 +270,7 @@ MonoBehaviour:
     Data3: 216910734
     Data4: 1248289585
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -301,7 +297,7 @@ MonoBehaviour:
     Data3: -1126229334
     Data4: -893090528
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -328,7 +324,7 @@ MonoBehaviour:
     Data3: 1189723059
     Data4: 2066931864
   Banks:
-  - {fileID: 2614607455485663201}
+  - {fileID: 2003637200096538098}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
