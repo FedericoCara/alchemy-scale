@@ -71,6 +71,16 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-* Rider
+# Rider
 .idea/
 /win deploy
+
+# FMOD Project
+FMODProject/.idea/
+FMODProject/.vscode/
+FMODProject/Cache/
+FMODProject/Editor/
+FMODProject/Generated/
+FMODProject/Logs/
+FMODProject/*.tmp
+FMODProject/*.log
