@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Components;
+using Components.Ingredients;
 using Model;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -56,7 +58,7 @@ public class ScaleController : MonoBehaviour
         }
 
         ingredient.transform.position = leftPositions[ingredientsWorldLeft.Count].position;
-        ingredient.transform.parent = leftPositions[ingredientsWorldLeft.Count];
+        ingredient.transform.SetParent(leftPositions[ingredientsWorldLeft.Count]);
         ingredient.GetComponent<Rigidbody>().isKinematic = true;
 
         ingredientsWorldLeft.Add(ingredient);
@@ -69,7 +71,7 @@ public class ScaleController : MonoBehaviour
         if (ingredientsWorldLeft.Count > 0)
         {
             var lastItem = ingredientsWorldLeft[ingredientsWorldLeft.Count - 1];
-            RemoveItem(lastItem, leftPositions);
+            RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldLeft));
             ingredientsWorldLeft.RemoveAt(ingredientsWorldLeft.Count - 1);
             CalcResult();
             EnableResetButton(true);
@@ -84,7 +86,7 @@ public class ScaleController : MonoBehaviour
         }
         
         ingredient.transform.position = rightPositions[ingredientsWorldRight.Count].position;
-        ingredient.transform.parent = rightPositions[ingredientsWorldRight.Count];
+        ingredient.transform.SetParent(rightPositions[ingredientsWorldRight.Count]);
         ingredient.GetComponent<Rigidbody>().isKinematic = true;
         
         ingredientsWorldRight.Add(ingredient);
@@ -97,19 +99,22 @@ public class ScaleController : MonoBehaviour
         if (ingredientsWorldRight.Count > 0)
         {
             var lastItem = ingredientsWorldRight[ingredientsWorldRight.Count - 1];
-            RemoveItem(lastItem, rightPositions);
+            RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldRight));
             ingredientsWorldRight.RemoveAt(ingredientsWorldRight.Count - 1);
             CalcResult();
             EnableResetButton(true);
         }
     }
 
-    private void RemoveItem(IngredientWorld ingredientWorld, List<Transform> positions)
+    private void RemoveItem(IngredientWorld ingredientWorld, List<Ingredient> previousIngredients)
     {
         // Reset the item's position to be outside the scale
-        ingredientWorld.transform.position = new Vector3(ingredientWorld.transform.position.x, ingredientWorld.transform.position.y, _spawner.GetNextSpawnPoint().position.z);
+        var ingredientTransform = ingredientWorld.transform;
+        ingredientTransform.position = new Vector3(ingredientTransform.position.x,
+                                                    ingredientTransform.position.y,
+                                                    _spawner.GetNextSpawnPoint().position.z);
 
-        var rigidBody = ingredientWorld.transform.GetComponentInParent<Rigidbody>();
+        var rigidBody = ingredientTransform.GetComponentInParent<Rigidbody>();
 
         if (rigidBody != null)
         {
@@ -117,9 +122,10 @@ public class ScaleController : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
         }
 
-        ingredientWorld.transform.parent = null;
+        ingredientTransform.parent = null;
+        ingredientWorld.TurnOffSynergy();
 
-        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
+        var draggable = ingredientTransform.GetComponentInParent<Draggable>();
 
         if (draggable != null)
         {
@@ -127,6 +133,12 @@ public class ScaleController : MonoBehaviour
             draggable.OnDragEndListener -= OnDropIngredient;
         }
     }
+
+    private List<Ingredient> GetPreviousIngredientsFromLastItem(List<IngredientWorld> allIngredients) =>
+        allIngredients
+            .GetRange(0, allIngredients.Count-1)
+            .Select(ingredient => ingredient.ingredient)
+            .ToList();
 
     public void CalcResult()
     {
@@ -145,11 +157,13 @@ public class ScaleController : MonoBehaviour
         foreach (var ingredientWorld in ingredientsWorldLeft)
         {
             ResetIngredientPosition(ingredientWorld);
+            ingredientWorld.TurnOffSynergy();
         }
         
         foreach (var ingredientWorld in ingredientsWorldRight)
         {
             ResetIngredientPosition(ingredientWorld);
+            ingredientWorld.TurnOffSynergy();
         }
         
         ingredientsWorldLeft.Clear();
@@ -228,15 +242,19 @@ public class ScaleController : MonoBehaviour
         lastDropTime = Time.time;
 
         var ingredientWorld = draggable.gameObject.GetComponent<IngredientWorld>();
-
+        List<Ingredient> previousIngredients;
         if (IsOnLeft(ingredientWorld))
         {
+            previousIngredients = ingredientsWorldLeft.Select(previousIngredient => previousIngredient.ingredient).ToList();
             AddIngredientLeft(ingredientWorld);
         }
         else
         {
+            previousIngredients = ingredientsWorldRight.Select(previousIngredient => previousIngredient.ingredient).ToList();
             AddIngredientRight(ingredientWorld);
         }
+
+        TurnOnSynergyIfNecessary(ingredientWorld, previousIngredients);
 
         draggable.Interactable = false;
         EnableResetButton(true);
@@ -266,5 +284,13 @@ public class ScaleController : MonoBehaviour
     private void EnableResetButton(bool enabled)
     {
         resetScaleButton.SetActive(enabled);
+    }
+
+    private void TurnOnSynergyIfNecessary(IngredientWorld ingredientWorld, List<Ingredient> previousIngredients)
+    {
+        if (ingredientWorld.ingredient.HasSynergy(previousIngredients))
+        {
+            ingredientWorld.TurnOnSynergy();
+        }
     }
 }

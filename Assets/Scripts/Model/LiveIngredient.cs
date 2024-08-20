@@ -19,5 +19,15 @@ namespace Model
 
             return resultingWeight;
         }
+
+        public override bool HasSynergy(List<Ingredient> previousIngredients)
+        {
+            foreach (var sinergy in sinergies)
+            {
+                if (sinergy.Activates(previousIngredients))
+                    return true;
+            }
+            return false;
+        }
     }
 }

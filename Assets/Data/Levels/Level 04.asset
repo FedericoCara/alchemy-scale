@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Level 04
   m_EditorClassIdentifier: 
   startingIngredients:
-  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
-    amount: 5
   - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
-    amount: 1
-  - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
     amount: 2
-  targetWeight: 85
+  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
+    amount: 1
+  targetWeight: 75
   targetPotion: {fileID: 4618540527432702050, guid: 6ee4290371052f44298879bb809fd9de,
     type: 3}

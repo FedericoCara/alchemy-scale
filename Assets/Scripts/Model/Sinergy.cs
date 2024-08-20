@@ -34,5 +34,17 @@ namespace Model
 
             return addedWeight;
         }
+
+        public bool Activates(List<Ingredient> previousIngredients)
+        {
+            foreach (var previousIngredient in previousIngredients)
+            {
+                if (previousIngredient == ingredient)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 }

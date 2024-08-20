@@ -15,5 +15,7 @@ namespace Model
         public Sprite CauldronSprite => cauldronSprite;
         
         public abstract int CalculateWeight(List<Ingredient> previousIngredients);
+
+        public abstract bool HasSynergy(List<Ingredient> previousIngredients);
     }
 }

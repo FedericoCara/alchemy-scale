@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Components.Ingredients;
 using Model;
 using UnityEngine;
 using UnityEngine.Serialization;

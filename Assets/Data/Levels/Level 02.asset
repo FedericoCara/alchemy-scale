@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingIngredients:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
-    amount: 1
+    amount: 2
   - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
-    amount: 1
-  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
-    amount: 1
-  targetWeight: 40
+    amount: 2
+  targetWeight: 25
   targetPotion: {fileID: 5226510898647876592, guid: a54274f3dc90f2843b04a2d1bab22908,
     type: 3}
