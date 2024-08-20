@@ -7,6 +7,7 @@ namespace UI
     {
         public LevelManager levelManager;
         public GlossaryButtonController glossaryButton;
+        public GameObject useMeCanvas;
         public int minLevelForGlossary = 2;
         private void Start()
         {
@@ -17,6 +18,7 @@ namespace UI
         private void UpdateButton()
         {
             glossaryButton.Interactable = levelManager.LevelNumber >= minLevelForGlossary;
+            useMeCanvas.SetActive(levelManager.LevelNumber >= minLevelForGlossary);
         }
     }
 }
