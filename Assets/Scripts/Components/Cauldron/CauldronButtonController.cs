@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ namespace Components.Cauldron
 
         [SerializeField]
         private CauldronWorld cauldronWorld;
+
+        [SerializeField]
+        private float defaultWidth = 4;
 
         private bool _interactable = true;
 
@@ -25,14 +29,12 @@ namespace Components.Cauldron
             }
         }
 
-        private Dictionary<Outline, float> outlineDefaultWidthValues = new();
 
-
-        private void Awake()
+        private IEnumerator Start()
         {
+            yield return new WaitForEndOfFrame();
             foreach (Outline outline in outlines)
             {
-                outlineDefaultWidthValues.Add(outline, outline.OutlineWidth);
                 outline.OutlineWidth = 0;
             }
         }
@@ -58,7 +60,7 @@ namespace Components.Cauldron
         {
             foreach (Outline outline in outlines)
             {
-                outline.OutlineWidth = outlineEnabled ? outlineDefaultWidthValues[outline] :  0;
+                outline.OutlineWidth = outlineEnabled ? defaultWidth :  0;
             }
         }
     }
