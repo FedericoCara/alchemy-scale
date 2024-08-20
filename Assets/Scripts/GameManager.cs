@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Components;
 using Model;
@@ -8,10 +9,28 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private IngredientsManager ingredientsManager;
+    [SerializeField] private TutorialController tutorialController;
     [SerializeField] private GameObject successGO;
     [SerializeField] private GameObject failGO;
 
     public static Glossary glossary = new Glossary();
+
+    private void Start()
+    {
+        if (levelManager.LevelNumber == 1)
+        {
+            tutorialController.ShowTutorial();
+        }
+        else
+        {
+            ingredientsManager.RestartIngredients();
+        }
+    }
+
+    public void OnTutorialFinished()
+    {
+        ingredientsManager.RestartIngredients();
+    }
 
     public void SetSuccess()
     {

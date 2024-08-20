@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cauldron_Water
-    second: {fileID: 2100000, guid: 6067c7dccb3c76b438ec42214ddb0648, type: 2}
+    second: {fileID: 2100000, guid: df13c318adea0bc4d891281d0c267dd3, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

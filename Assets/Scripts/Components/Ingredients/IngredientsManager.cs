@@ -27,11 +27,6 @@ namespace Components
             BuildIngredientDictionary();
         }
 
-        private void Start()
-        {
-            RestartIngredients();
-        }
-
         public void RestartIngredients()
         {
             StartCoroutine(RestartIngredientCoroutine());
