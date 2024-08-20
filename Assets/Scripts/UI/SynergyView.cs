@@ -7,28 +7,28 @@ using UnityEngine.UI;
 
 public class SynergyView : MonoBehaviour
 {
-    [SerializeField] private TMP_Text firstPartText;
-    [SerializeField] private TMP_Text lastPartText;
+    [SerializeField] private TMP_Text resultText;
+    [SerializeField] private Image ingredientImage;
     [SerializeField] private Image targetIngredientImage;
+    [SerializeField] private Sprite unknownIngredientSprite;
     
     private Sinergy synergy;
     
-    public void Init(Sinergy synergy)
+    public void Init(Ingredient ingredient, Sinergy synergy)
     {
         this.synergy = synergy;
         
-        if (!GameManager.glossary.IsUnlocked(synergy))
-        {
-            targetIngredientImage.gameObject.SetActive(false);
-            firstPartText.text = $"??";
-        }
-        else
-        {
-            targetIngredientImage.sprite = synergy.ingredient.IconSprite;
-            firstPartText.text = $">{this.synergy.amount} {(synergy.repeatable?"R":"")}";
-        }
+        resultText.text = !GameManager.glossary.IsUnlocked(synergy) 
+            ? "?" 
+            : $"{synergy.weightAdded}";
         
-        lastPartText.text = $" -> {this.synergy.weightAdded}p";
+        targetIngredientImage.sprite = GameManager.glossary.IsUnlocked(synergy.ingredient) 
+            ? synergy.ingredient.IconSprite 
+            : unknownIngredientSprite;
+        
+        ingredientImage.sprite = GameManager.glossary.IsUnlocked(ingredient) 
+            ? ingredient.IconSprite 
+            : unknownIngredientSprite;
         
 
     }

@@ -32,8 +32,11 @@ public class ScaleController : MonoBehaviour
         {
             result = value;
             animator.SetFloat("Direction", result);
+            OnResultChanged?.Invoke();
         }
     }
+    
+    public event Action OnResultChanged;
 
     public void TouchLeft()
     {
@@ -59,10 +62,8 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldLeft.Add(ingredient);
         CalcResult();
         onTouchLeft?.Invoke();
-
-        Debug.Log("Add L:");
-        Debug.Log(ingredientsWorldLeft.Count);
     }
+    
     public void RemoveLastItemLeft()
     {
         if (ingredientsWorldLeft.Count > 0)
@@ -73,10 +74,8 @@ public class ScaleController : MonoBehaviour
             CalcResult();
             EnableResetButton(true);
         }
-
-        Debug.Log("Rev L:");
-        Debug.Log(ingredientsWorldLeft.Count);
     }
+    
     public void AddIngredientRight(IngredientWorld ingredient)
     {
         if (ingredientsWorldRight.Count >= rightPositions.Count)
@@ -91,9 +90,6 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldRight.Add(ingredient);
         CalcResult();
         onTouchRight?.Invoke();
-
-        Debug.Log("Add R:");
-        Debug.Log(ingredientsWorldRight.Count);
     }
 
     public void RemoveLastItemRight()
@@ -106,9 +102,6 @@ public class ScaleController : MonoBehaviour
             CalcResult();
             EnableResetButton(true);
         }
-
-        Debug.Log("Rev R:");
-        Debug.Log(ingredientsWorldRight.Count);
     }
 
     private void RemoveItem(IngredientWorld ingredientWorld, List<Transform> positions)
@@ -211,7 +204,6 @@ public class ScaleController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter");
         if (other.gameObject.transform.parent == null)
         {
             return;
@@ -228,8 +220,6 @@ public class ScaleController : MonoBehaviour
 
     private void OnDropIngredient(Draggable draggable)
     {
-        Debug.Log("OnDropIngredient");
-
         if (Time.time - lastDropTime < debounceTime)
         {
             return; // Skip if the debounce time hasn't elapsed
