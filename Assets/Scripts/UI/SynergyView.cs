@@ -19,8 +19,8 @@ public class SynergyView : MonoBehaviour
         this.synergy = synergy;
         
         resultText.text = !GameManager.glossary.IsUnlocked(synergy) 
-            ? "?" 
-            : $"{synergy.weightAdded}";
+            ? "? " 
+            : $"{(synergy.weightAdded>0?"+":"")}{synergy.weightAdded}";
         
         targetIngredientImage.sprite = GameManager.glossary.IsUnlocked(synergy.ingredient) 
             ? synergy.ingredient.IconSprite 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
   m_Name: C Pata de rana
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 977821069, guid: 689f3034fc7cc4c2d823ad82ff751f49, type: 3}
+  iconSprite: {fileID: 21300000, guid: 9dd99c81d50e7e947af3ab417f4f2ed5, type: 3}
   cauldronSprite: {fileID: 21300000, guid: 66115c350f01fd849b0c30192b413e7c, type: 3}
   weight: 50
   sinergies:
