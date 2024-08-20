@@ -1105,6 +1105,7 @@ GameObject:
   m_Component:
   - component: {fileID: 245993940}
   - component: {fileID: 245993939}
+  - component: {fileID: 245993941}
   m_Layer: 0
   m_Name: TableCollider
   m_TagString: Untagged
@@ -1148,6 +1149,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &245993941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 245993938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: -1
+  OverrideMaxDistance: -1
 --- !u!1001 &246608633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4077,6 +4109,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 760192293}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &774510217 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 149454306464748823, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &774510221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774510217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 528860922
+      Data2: 1208768280
+      Data3: -1126229334
+      Data4: -893090528
+    Path: event:/clic_spark_2a
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &775588170
 GameObject:
   m_ObjectHideFlags: 0
@@ -6091,11 +6160,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1784905270
-      Data2: 1192851626
-      Data3: 654122677
-      Data4: -1919087205
-    Path: event:/ScaleJig_PreProd
+      Data1: 1296732707
+      Data2: 1137167047
+      Data3: 944834689
+      Data4: -994810227
+    Path: event:/Music
   Event: 
   PlayEvent: 1
   StopEvent: 0
@@ -6946,6 +7015,37 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!114 &1159326566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159326554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1126282106
+      Data2: 1281167659
+      Data3: -688996434
+      Data4: -154583027
+    Path: event:/clic_spark_1b
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1173988328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6657183476cf17d4a93ed5863baf9d8e,
@@ -7720,6 +7820,43 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4c0df09bcb73427dbc5b7ddd6df9f91, type: 3}
+--- !u!1 &1310865887 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 942167699958709340, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1310865892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1310865887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 560363845
+      Data2: 1234532507
+      Data3: 2062183566
+      Data4: -1588559303
+    Path: event:/clic_spark_2b
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1326925425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10682,7 +10819,7 @@ MonoBehaviour:
       Data2: 1232084306
       Data3: 1118529467
       Data4: 1157468780
-    Path: event:/clic_spark
+    Path: event:/clic_spark_1a
   Event: 
   PlayEvent: 20
   StopEvent: 0
@@ -11940,10 +12077,22 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1159326561}
+    - targetCorrespondingSourceObject: {fileID: 5521071503077295242, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1159326566}
     - targetCorrespondingSourceObject: {fileID: 821120127850187884, guid: e1b0e5c8e70726643a3a8b41591eab38,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1866211415}
+    - targetCorrespondingSourceObject: {fileID: 149454306464748823, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 774510221}
+    - targetCorrespondingSourceObject: {fileID: 942167699958709340, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1310865892}
   m_SourcePrefab: {fileID: 100100000, guid: e1b0e5c8e70726643a3a8b41591eab38, type: 3}
 --- !u!1001 &1736523487107627026
 PrefabInstance:
