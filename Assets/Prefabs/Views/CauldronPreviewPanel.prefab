@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewParent: {fileID: 1038951101308546273}
-  preferredSize: 20
+  preferredSize: 30
 --- !u!1 &9214437034827381928
 GameObject:
   m_ObjectHideFlags: 0

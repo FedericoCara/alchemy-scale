@@ -6,7 +6,8 @@ namespace UI
     public class GlossaryDisplay : MonoBehaviour
     {
         public LevelManager levelManager;
-        public GameObject glossaryButton;
+        public GlossaryButtonController glossaryButton;
+        public int minLevelForGlossary = 2;
         private void Start()
         {
             UpdateButton();
@@ -15,7 +16,7 @@ namespace UI
 
         private void UpdateButton()
         {
-            glossaryButton.SetActive(levelManager.LevelNumber>=2);
+            glossaryButton.Interactable = levelManager.LevelNumber >= minLevelForGlossary;
         }
     }
 }

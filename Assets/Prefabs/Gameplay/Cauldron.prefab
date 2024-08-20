@@ -4940,7 +4940,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
   parent: {fileID: 1945354739205262190}
-  delayUntilHide: 2
+  delayUntilHide: 3
 --- !u!1 &7231137493049809633
 GameObject:
   m_ObjectHideFlags: 0
