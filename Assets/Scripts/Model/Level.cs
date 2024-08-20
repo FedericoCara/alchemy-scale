@@ -11,6 +11,7 @@ namespace Model
         public List<StartingIngredient> startingIngredients;
         public int targetWeight;
         public GameObject targetPotion;
+        public Sprite targetPotionIcon;
     }
 
     [Serializable]
