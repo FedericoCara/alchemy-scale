@@ -1,8 +1,7 @@
 using System;
 using DG.Tweening;
-using Meshes.Enviroment;
+using Meshes.Environment.Cauldron;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Components.Cauldron
 {
