@@ -2065,6 +2065,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6657183476cf17d4a93ed5863baf9d8e, type: 3}
+--- !u!1 &458733609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5856319606995087059, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &464703066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3966,6 +3972,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
   ingredientsManager: {fileID: 631970276}
+  cameraAnimator: {fileID: 1039443889}
+  creditsPanel: {fileID: 458733609}
+  tutorialController: {fileID: 1284862336}
 --- !u!4 &775588172
 Transform:
   m_ObjectHideFlags: 0
@@ -6866,6 +6875,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1279676272}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1284862336 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2383767443500953138, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2edb67cd72c203048ba20ef471fb1a34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1298509463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7225,7 +7246,7 @@ PrefabInstance:
     - target: {fileID: 6616869207460645281, guid: b4c0df09bcb73427dbc5b7ddd6df9f91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -12.214386
+      value: -12.214355
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

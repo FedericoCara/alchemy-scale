@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private IngredientsManager ingredientsManager;
+    [SerializeField] private CameraAnimator cameraAnimator;
+    [SerializeField] private GameObject creditsPanel;
+    [SerializeField] private TutorialController tutorialController;
 
     public static Glossary glossary = new Glossary();
 
@@ -28,7 +31,10 @@ public class GameManager : MonoBehaviour
         var nextLevel = levelManager.GetAndSetNextLevel();
         if (nextLevel == null)
         {
-            SceneManager.LoadScene("Credits");
+            cameraAnimator.MoveToTutorialPosition();
+            creditsPanel.SetActive(true);
+            tutorialController.gameObject.SetActive(false);
+            levelManager.ResetGame();
             return;
         }
 

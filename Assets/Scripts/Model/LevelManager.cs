@@ -36,5 +36,10 @@ namespace Model
         {
             currentLevelIndex = _startingLevelIndex;
         }
+
+        public void ResetGame()
+        {
+            currentLevelIndex = 0;
+        }
     }
 }
