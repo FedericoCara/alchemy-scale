@@ -3,11 +3,14 @@ using Components.Ingredients;
 using DG.Tweening;
 using Model;
 using UnityEngine;
+using FMODUnity;
 
 namespace Components.Cauldron
 {
     public class CauldronWorld : MonoBehaviour
-    {
+    {      
+        [SerializeField] private EventReference winAudio;
+        [SerializeField] private EventReference defeatAudio;
         public List<Ingredient> ingredients;
         public LevelManager levelManager;
         public IngredientsManager ingredientsManager;
@@ -70,10 +73,12 @@ namespace Components.Cauldron
             if (IsSuccess(_lastMixResult))
             {
                 potionSpawner.SpawnPotion(OnPotionShown);
+                RuntimeManager.PlayOneShot(winAudio);
             }
             else
             {
                 Debug.Log("Cauldron failed with weight: "+_lastMixResult.resultingWeight);
+                RuntimeManager.PlayOneShot(defeatAudio);
                 gameManager.SetFail();
                 OnFeedbackFinished();
             }

@@ -66,7 +66,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904bf5ba3293ba14ca93fe0625c4ac13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
   scaleObject: {fileID: 7375926199635641287}
   isLeft: 0
 --- !u!1 &7375926199635641287
@@ -129,6 +128,13 @@ MonoBehaviour:
   - {fileID: 5289512968514870714}
   - {fileID: 5977895051440367383}
   resetScaleButton: {fileID: 0}
+  removeItem_audio:
+    Guid:
+      Data1: 1352438184
+      Data2: 1135081099
+      Data3: -373004374
+      Data4: -1205834922
+    Path: event:/hinge
 --- !u!54 &1844206152124881923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -222,7 +228,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904bf5ba3293ba14ca93fe0625c4ac13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCamera: {fileID: 0}
   scaleObject: {fileID: 7375926199635641287}
   isLeft: 1
 --- !u!1001 &2912973538143594138

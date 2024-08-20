@@ -6,6 +6,7 @@ using Components.Ingredients;
 using Model;
 using Unity.VisualScripting;
 using UnityEngine;
+using FMODUnity;
 
 public class ScaleController : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class ScaleController : MonoBehaviour
     [SerializeField] private List<Transform> leftPositions;
     [SerializeField] private List<Transform> rightPositions;
     [SerializeField] private GameObject resetScaleButton;
+    [SerializeField] private EventReference removeItem_audio;
 
     private event Action onTouchLeft;
     private event Action onTouchRight;
@@ -26,6 +28,8 @@ public class ScaleController : MonoBehaviour
 
     private float debounceTime = 0.5f; // Time in seconds to wait before allowing another addition
     private float lastDropTime = 0f;
+
+    
 
     public float Result
     {
@@ -108,6 +112,7 @@ public class ScaleController : MonoBehaviour
 
     private void RemoveItem(IngredientWorld ingredientWorld, List<Ingredient> previousIngredients)
     {
+        RuntimeManager.PlayOneShot(removeItem_audio);
         // Reset the item's position to be outside the scale
         var ingredientTransform = ingredientWorld.transform;
         ingredientTransform.position = new Vector3(ingredientTransform.position.x,
@@ -153,6 +158,7 @@ public class ScaleController : MonoBehaviour
     }
 
     public void Reset()
+    
     {
         foreach (var ingredientWorld in ingredientsWorldLeft)
         {
@@ -252,12 +258,14 @@ public class ScaleController : MonoBehaviour
         {
             previousIngredients = ingredientsWorldRight.Select(previousIngredient => previousIngredient.ingredient).ToList();
             AddIngredientRight(ingredientWorld);
+            
         }
 
         TurnOnSynergyIfNecessary(ingredientWorld, previousIngredients);
 
         draggable.Interactable = false;
         EnableResetButton(true);
+        RuntimeManager.PlayOneShot(removeItem_audio);
     }
 
     private void OnTriggerExit(Collider other)

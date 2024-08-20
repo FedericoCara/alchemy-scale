@@ -1,16 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 namespace UI
 {
-    public class GlossaryButtonController : MonoBehaviour
+    public class GlossaryButtonController : MonoBehaviour 
     {
         [SerializeField]
         private List<Outline> outlines;
 
         [SerializeField]
         private GameObject glossary;
-
+        [SerializeField] private EventReference paper;
         private bool _interactable = true;
 
         public bool Interactable
@@ -51,6 +52,7 @@ namespace UI
         {
             if(_interactable)
                 glossary.SetActive(true);
+                RuntimeManager.PlayOneShot(paper);
         }
 
         private void SetOutline(bool outlineEnabled)
