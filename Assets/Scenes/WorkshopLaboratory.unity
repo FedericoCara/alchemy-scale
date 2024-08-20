@@ -5352,6 +5352,43 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &889791364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8767141560432547011, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &889791369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889791364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 345825932
+      Data2: 1087915735
+      Data3: -1725473138
+      Data4: 1612274006
+    Path: event:/drop_tentacle
+  Event: 
+  PlayEvent: 9
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &902142435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6723,6 +6760,9 @@ GameObject:
   - component: {fileID: 1039443889}
   - component: {fileID: 1039443891}
   - component: {fileID: 1039443890}
+  - component: {fileID: 1039443896}
+  - component: {fileID: 1039443895}
+  - component: {fileID: 1039443892}
   m_Layer: 7
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6900,6 +6940,69 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 55
   m_MaxRayIntersections: 0
+--- !u!114 &1039443892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039443884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1784905270
+      Data2: 1192851626
+      Data3: 654122677
+      Data4: -1919087205
+    Path: event:/ScaleJig_PreProd
+  Event: 
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1039443895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039443884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+--- !u!114 &1039443896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039443884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 0
+  Banks:
+  - Master
+  - Music
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &1041887714
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,6 +7561,74 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1159326554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5521071503077295242, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1159326559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159326554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1905053421
+      Data2: 1127823237
+      Data3: 281255074
+      Data4: 811217466
+    Path: event:/cauldron_loop
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &1159326560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159326554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1840578339
+      Data2: 1142767824
+      Data3: 804300433
+      Data4: 1902319949
+    Path: event:/wood_crackle
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1173988328 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6657183476cf17d4a93ed5863baf9d8e,
@@ -11567,6 +11738,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1821060972}
   m_CullTransparentMesh: 1
+--- !u!1 &1840426057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ca217915e28c3441a825ed0d513a38c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1852981741}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1846125576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11790,7 +11967,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1ca217915e28c3441a825ed0d513a38c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1852981745}
   m_SourcePrefab: {fileID: 100100000, guid: 1ca217915e28c3441a825ed0d513a38c, type: 3}
 --- !u!4 &1852981742 stripped
 Transform:
@@ -11798,6 +11979,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1852981741}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1852981745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840426057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 345825932
+      Data2: 1087915735
+      Data3: -1725473138
+      Data4: 1612274006
+    Path: event:/drop_tentacle
+  Event: 
+  PlayEvent: 3
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &1863821330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11872,6 +12084,43 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1863821330}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866211410 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 821120127850187884, guid: e1b0e5c8e70726643a3a8b41591eab38,
+    type: 3}
+  m_PrefabInstance: {fileID: 1528697282423675943}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866211415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866211410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 839395246
+      Data2: 1232084306
+      Data3: 1118529467
+      Data4: 1157468780
+    Path: event:/clic_spark
+  Event: 
+  PlayEvent: 20
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!4 &1870695089 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6657183476cf17d4a93ed5863baf9d8e,
@@ -13103,7 +13352,23 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8767141560432547011, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 889791369}
+    - targetCorrespondingSourceObject: {fileID: 5521071503077295242, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1159326559}
+    - targetCorrespondingSourceObject: {fileID: 5521071503077295242, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1159326560}
+    - targetCorrespondingSourceObject: {fileID: 821120127850187884, guid: e1b0e5c8e70726643a3a8b41591eab38,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866211415}
   m_SourcePrefab: {fileID: 100100000, guid: e1b0e5c8e70726643a3a8b41591eab38, type: 3}
 --- !u!1001 &1736523487107627026
 PrefabInstance:

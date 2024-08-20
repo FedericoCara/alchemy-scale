@@ -1,5 +1,59 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8062315890908337688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/cauldron_loop
+  m_EditorClassIdentifier: 
+  Path: event:/cauldron_loop
+  Guid:
+    Data1: 1905053421
+    Data2: 1127823237
+    Data3: 281255074
+    Data4: 811217466
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5984486200863778310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/water_drip_high
+  m_EditorClassIdentifier: 
+  Path: event:/water_drip_high
+  Guid:
+    Data1: -1498744597
+    Data2: 1177655788
+    Data3: 2043813811
+    Data4: -268980318
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5734567034680690393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,10 +69,138 @@ MonoBehaviour:
   Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638596158487259209
+  lastModified: 638597132419323240
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 1208
+  Exists: 1
+--- !u!114 &-2867199559271984124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clic_spark
+  m_EditorClassIdentifier: 
+  Path: event:/clic_spark
+  Guid:
+    Data1: 839395246
+    Data2: 1232084306
+    Data3: 1118529467
+    Data4: 1157468780
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2500260895558969653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/wood_crackle
+  m_EditorClassIdentifier: 
+  Path: event:/wood_crackle
+  Guid:
+    Data1: 1840578339
+    Data2: 1142767824
+    Data3: 804300433
+    Data4: 1902319949
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 35213
+--- !u!114 &-2354201913884538432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/drop_tentacle
+  m_EditorClassIdentifier: 
+  Path: event:/drop_tentacle
+  Guid:
+    Data1: 345825932
+    Data2: 1087915735
+    Data3: -1725473138
+    Data4: 1612274006
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 345
+--- !u!114 &-2228095032440093783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/ScaleJig_PreProd
+  m_EditorClassIdentifier: 
+  Path: event:/ScaleJig_PreProd
+  Guid:
+    Data1: -1784905270
+    Data2: 1192851626
+    Data3: 654122677
+    Data4: -1919087205
+  Banks:
+  - {fileID: -965185527728591318}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 177192
+--- !u!114 &-965185527728591318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638596259435396594
+  FileSizes:
+  - Name: Desktop
+    Value: 2503296
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -35,13 +217,23 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -5734567034680690393}
   - {fileID: 2614607455485663201}
-  EditorEvents: []
+  - {fileID: -965185527728591318}
+  EditorEvents:
+  - {fileID: -2500260895558969653}
+  - {fileID: 6063453802541431307}
+  - {fileID: -2354201913884538432}
+  - {fileID: -5984486200863778310}
+  - {fileID: -8062315890908337688}
+  - {fileID: -2228095032440093783}
+  - {fileID: -2867199559271984124}
+  - {fileID: 3753081364336699034}
+  - {fileID: 5128493978140765270}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2614607455485663201}
   StringsBanks:
   - {fileID: -5734567034680690393}
-  cacheTime: 638596158487259209
+  cacheTime: 638597132419323240
   cacheVersion: 131619
 --- !u!114 &2614607455485663201
 MonoBehaviour:
@@ -58,8 +250,89 @@ MonoBehaviour:
   Path: ../_alchemy-scale-music/alchemy fmod/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638596158487248888
+  lastModified: 638597132419298125
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 1039168
   Exists: 1
+--- !u!114 &3753081364336699034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clic_spark_high_short
+  m_EditorClassIdentifier: 
+  Path: event:/clic_spark_high_short
+  Guid:
+    Data1: 1186623673
+    Data2: 1238021652
+    Data3: 216910734
+    Data4: 1248289585
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5128493978140765270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/clic_spark_2
+  m_EditorClassIdentifier: 
+  Path: event:/clic_spark_2
+  Guid:
+    Data1: 528860922
+    Data2: 1208768280
+    Data3: -1126229334
+    Data4: -893090528
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6063453802541431307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/water_drip_soft
+  m_EditorClassIdentifier: 
+  Path: event:/water_drip_soft
+  Guid:
+    Data1: -912789212
+    Data2: 1247488876
+    Data3: 1189723059
+    Data4: 2066931864
+  Banks:
+  - {fileID: 2614607455485663201}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
