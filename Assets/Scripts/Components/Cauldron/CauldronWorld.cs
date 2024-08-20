@@ -1,5 +1,5 @@
-using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Model;
 using UnityEngine;
 
@@ -16,7 +16,9 @@ namespace Components.Cauldron
         public CauldronAnimator cauldronAnimator;
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
+        public PotionSpawner potionSpawner;
         public float resetCamTime = 7;
+        
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;
@@ -24,6 +26,12 @@ namespace Components.Cauldron
         private void OnEnable()
         {
             DisableMixButton();
+            EnableCauldronPreview(false);
+        }
+
+        private void EnableCauldronPreview(bool enabled)
+        {
+            cauldronPreview.gameObject.SetActive(enabled);
         }
 
         public void Mix()
@@ -37,6 +45,7 @@ namespace Components.Cauldron
         {
             ingredients.Add(ingredient.ingredient);
             cauldronPreview.Add(ingredient.ingredient);
+            EnableCauldronPreview(true);
             ingredient.gameObject.SetActive(false);
             EnableMixButton();
         }
@@ -51,7 +60,6 @@ namespace Components.Cauldron
             _lastMixResult = _cauldron.Mix(ingredients);
             cauldronAnimator.AnimateSpin(IsSuccess(_lastMixResult), StopCauldron);
             ingredientsManager.ClearIngredients();
-            Invoke(nameof(OnFeedbackFinished), resetCamTime);
         }
 
         private void StopCauldron()
@@ -59,19 +67,27 @@ namespace Components.Cauldron
             EmptyIngredients();
             if (IsSuccess(_lastMixResult))
             {
-                gameManager.SetSuccess();
+                potionSpawner.SpawnPotion(OnPotionShown);
             }
             else
             {
                 Debug.Log("Cauldron failed with weight: "+_lastMixResult.resultingWeight);
                 gameManager.SetFail();
+                OnFeedbackFinished();
             }
+        }
+
+        private void OnPotionShown()
+        {
+            gameManager.SetSuccess();
+            OnFeedbackFinished();
         }
 
         private void EmptyIngredients()
         {
             cauldronPreview.Clear();
             ingredients.Clear();
+            EnableCauldronPreview(false);
         }
 
         public void OnFeedbackFinished()

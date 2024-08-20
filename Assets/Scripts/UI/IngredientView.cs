@@ -21,7 +21,9 @@ namespace UI
             this.ingredient = ingredient;
 
             ingredientNameText.text = ingredient.name;
-            ingredientWeightText.text = GameManager.glossary.IsUnlockedWeight(ingredient)?ingredient.Weight+"p":"??";
+            ingredientWeightText.text = GameManager.glossary.IsUnlockedWeight(ingredient)
+                ? ingredient.Weight.ToString()
+                : "?";
             ingredientImage.sprite = ingredient.IconSprite;
             
             synergiesViews = new List<SynergyView>();
@@ -30,7 +32,7 @@ namespace UI
                 foreach (var synergy in liveIngredient.Synergies)
                 {
                     var synergyView = Instantiate(synergyViewPrefab, synergiesParent);
-                    synergyView.Init(synergy);
+                    synergyView.Init(ingredient, synergy);
                     synergiesViews.Add(synergyView);
                 }
             }

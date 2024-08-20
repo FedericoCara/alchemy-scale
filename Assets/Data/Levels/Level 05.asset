@@ -24,4 +24,5 @@ MonoBehaviour:
   - ingredient: {fileID: 11400000, guid: fac68ae2510de4a8e870f93bd49cb205, type: 2}
     amount: 1
   targetWeight: -20
-  targetPotion: {fileID: 0}
+  targetPotion: {fileID: 2295640194525280234, guid: 22e9c9596e2f4c84aa13b2c326ae4cfa,
+    type: 3}
