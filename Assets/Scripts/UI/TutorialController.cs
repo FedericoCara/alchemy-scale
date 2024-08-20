@@ -54,8 +54,9 @@ public class TutorialController : MonoBehaviour
 
     public void ShowTutorial()
     {
-        cameraAnimator.MoveToTutorialPosition();
-        Invoke(nameof(ShowGraphics),camMovementDuration*0.9f);
+        //cameraAnimator.MoveToTutorialPosition();
+        //Invoke(nameof(ShowGraphics),camMovementDuration*0.9f);
+        ShowGraphics();
     }
 
     public void HideTutorial()

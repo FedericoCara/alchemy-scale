@@ -9,20 +9,12 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] private LevelManager levelManager;
     [SerializeField] private IngredientsManager ingredientsManager;
-    [SerializeField] private TutorialController tutorialController;
 
     public static Glossary glossary = new Glossary();
 
-    private void Start()
+    public void StartGame()
     {
-        if (levelManager.LevelNumber == 1)
-        {
-            tutorialController.ShowTutorial();
-        }
-        else
-        {
-            ingredientsManager.RestartIngredients();
-        }
+        ingredientsManager.RestartIngredients();
     }
 
     public void OnTutorialFinished()
