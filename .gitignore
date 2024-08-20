@@ -84,3 +84,4 @@ FMODProject/Generated/
 FMODProject/Logs/
 FMODProject/*.tmp
 FMODProject/*.log
+fmod_editor.log
