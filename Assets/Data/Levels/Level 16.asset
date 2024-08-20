@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf189656a17b4bde9147a068e772631b, type: 3}
-  m_Name: Level 02
+  m_Name: Level 16
   m_EditorClassIdentifier: 
   startingIngredients:
-  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
-    amount: 2
-  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
-    amount: 2
-  targetWeight: 25
+  - ingredient: {fileID: 11400000, guid: 7f07f2754dc68467481b8705ef5a0f11, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
+    amount: 1
+  targetWeight: 0
   targetPotion: {fileID: 5226510898647876592, guid: a54274f3dc90f2843b04a2d1bab22908,
     type: 3}
