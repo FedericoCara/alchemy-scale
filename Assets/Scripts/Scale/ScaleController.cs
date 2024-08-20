@@ -74,7 +74,7 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldLeft));
             ingredientsWorldLeft.RemoveAt(ingredientsWorldLeft.Count - 1);
             CalcResult();
-            EnableResetButton(true);
+            EnableResetButton(ingredientsWorldLeft.Count>0);
         }
     }
     
@@ -102,7 +102,7 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldRight));
             ingredientsWorldRight.RemoveAt(ingredientsWorldRight.Count - 1);
             CalcResult();
-            EnableResetButton(true);
+            EnableResetButton(ingredientsWorldRight.Count>0);
         }
     }
 
