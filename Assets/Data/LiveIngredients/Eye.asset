@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: C Pata de rana
+  m_Name: Eye
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 9dd99c81d50e7e947af3ab417f4f2ed5, type: 3}
-  cauldronSprite: {fileID: 21300000, guid: 66115c350f01fd849b0c30192b413e7c, type: 3}
-  weight: 50
+  iconSprite: {fileID: 21300000, guid: c9b056886d95e15488e66c807b82f911, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 4c02fd17ff6209046967cb9d9714c5a3, type: 3}
+  weight: 25
   sinergies:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 1
-    weightAdded: -20
-    repeatable: 1
+    weightAdded: -10
+    repeatable: 0

@@ -12,6 +12,7 @@ namespace UI
         [SerializeField] private SynergyView synergyViewPrefab;
         [SerializeField] private Transform synergiesParent;
         [SerializeField] private Image ingredientImage;
+        [SerializeField] private Image ingredientNameImage;
         
         private Ingredient ingredient;
         private List<SynergyView> synergiesViews;
@@ -25,6 +26,7 @@ namespace UI
                 ? ingredient.Weight.ToString()
                 : "?";
             ingredientImage.sprite = ingredient.IconSprite;
+            ingredientNameImage.sprite = ingredient.IconSprite;
             
             synergiesViews = new List<SynergyView>();
             if (ingredient is LiveIngredient liveIngredient)

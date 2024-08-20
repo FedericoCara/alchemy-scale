@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56caf22d359842ec85cce34db63537f2, type: 3}
-  m_Name: E Hierbas
+  m_Name: Tentacle
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 1020707f8a8311045b7cee4224b01d45, type: 3}
-  cauldronSprite: {fileID: 21300000, guid: d492fc9d3e33eca40b2118a964e6e4d5, type: 3}
-  weight: 60
+  iconSprite: {fileID: 21300000, guid: 812dc5e52ef504244908d96f4b30959f, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 255cdc63ad5f2774b9d6c528e00144d7, type: 3}
+  weight: 10
   sinergies:
-  - ingredient: {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
+  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
     amount: 1
-    weightAdded: -10
+    weightAdded: 10
     repeatable: 0

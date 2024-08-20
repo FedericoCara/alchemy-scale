@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a914c41c319f4a74b48216908403e532, type: 3}
-  m_Name: G Gema
+  m_Script: {fileID: 11500000, guid: 14ca9b32ea8df3e4b9f99d43603d35b1, type: 3}
+  m_Name: Diamond
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 2b2e8d613c296054bb1f18cb3ad2242b, type: 3}
-  cauldronSprite: {fileID: 21300000, guid: f781be1fc6f320143a5ff053f1020849, type: 3}
-  weight: 0
+  iconSprite: {fileID: 21300000, guid: debdb722b2649ca47805e2dd1c9ab28f, type: 3}
+  cauldronSprite: {fileID: 21300000, guid: 8455e0a2f32d63847b6b65df62268f01, type: 3}
+  weight: 2
