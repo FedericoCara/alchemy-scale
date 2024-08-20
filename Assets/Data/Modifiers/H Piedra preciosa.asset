@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iconSprite: {fileID: 21300000, guid: debdb722b2649ca47805e2dd1c9ab28f, type: 3}
   cauldronSprite: {fileID: 21300000, guid: 8455e0a2f32d63847b6b65df62268f01, type: 3}
-  weight: 0
+  weight: 2
