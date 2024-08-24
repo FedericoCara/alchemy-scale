@@ -89,6 +89,12 @@ namespace Components
             xy.Raycast(ray, out distance);
             return ray.GetPoint(distance);
         }
+        public void StopDragging()
+        {
+            targetRigidbody.useGravity = true;
+            _dragging = false;
+            OnDragEndListener?.Invoke(this);
+        }
 
         public virtual void OnDraggedOver(PointerEventData eventData, List<RaycastResult> objectsDraggedOver) {
 

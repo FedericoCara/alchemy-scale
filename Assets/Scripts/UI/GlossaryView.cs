@@ -23,6 +23,7 @@ public class GlossaryView : MonoBehaviour
     {
         ingredientViews.ForEach(view => Destroy(view.gameObject));
         ingredientViews.Clear();
+
         foreach (var ingredient in Ingredients)
         {
             if (!GameManager.glossary.IsUnlocked(ingredient))
