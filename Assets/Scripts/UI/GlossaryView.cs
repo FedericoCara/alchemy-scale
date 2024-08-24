@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class GlossaryView : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip clip;
     [SerializeField] private List<Ingredient> Ingredients;
     [SerializeField] private IngredientView IngredientViewPrefab;
     [SerializeField] private Transform ingredientViewParent;
@@ -32,5 +34,10 @@ public class GlossaryView : MonoBehaviour
             ingredientView.Init(ingredient);
             ingredientViews.Add(ingredientView);
         }
+    }
+
+    public void PlayTheSound()
+    {
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, 1f);
     }
 }
