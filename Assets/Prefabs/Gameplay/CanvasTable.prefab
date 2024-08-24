@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Credits
+  m_text: '> Credits'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -561,7 +561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Back to menu -'
+  m_text: '> Back to menu'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Make potion
+  m_text: Make a potion
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -984,7 +984,6 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   hiddenColor: {r: 0.54901963, g: 0.54901963, b: 0.54901963, a: 0.54901963}
   graphicsChangeDuration: 0.5
-  camMovementDuration: 1
   closeButton: {fileID: 5521071503077295242}
 --- !u!1 &2961310011133125340
 GameObject:
@@ -1375,7 +1374,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The order of ingredients matters!
+  m_text: Ingredients order matters!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -2059,7 +2058,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '- Skip -'
+  m_text: '> Let''s go!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -2361,7 +2360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Start
+  m_text: '> Start'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,
@@ -2469,7 +2468,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3, y: 0.809}
+  m_AnchoredPosition: {x: 3, y: 0.80900574}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &89455912473919493

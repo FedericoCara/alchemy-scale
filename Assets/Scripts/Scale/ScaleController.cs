@@ -23,13 +23,11 @@ public class ScaleController : MonoBehaviour
     private List<IngredientWorld> ingredientsWorldLeft = new();
     private List<IngredientWorld> ingredientsWorldRight = new();
 
-    private Draggable currentDraggable;
+    public Draggable currentDraggable;
     private IngredientsManager _spawner;
 
     private float debounceTime = 0.5f; // Time in seconds to wait before allowing another addition
     private float lastDropTime = 0f;
-
-    
 
     public float Result
     {
@@ -222,23 +220,7 @@ public class ScaleController : MonoBehaviour
         animator.SetTrigger("TouchLeft");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.transform.parent == null)
-        {
-            return;
-        }
-
-        var parentGameObject = other.gameObject.transform.parent.gameObject;
-        var draggable = parentGameObject.GetComponent<Draggable>();
-        if (draggable != null && draggable.isDragging)
-        {
-            currentDraggable = draggable;
-            currentDraggable.OnDragEndListener += OnDropIngredient;
-        }
-    }
-
-    private void OnDropIngredient(Draggable draggable)
+    public void OnDropIngredient(Draggable draggable)
     {
         if (Time.time - lastDropTime < debounceTime)
         {
@@ -266,22 +248,6 @@ public class ScaleController : MonoBehaviour
         draggable.Interactable = false;
         EnableResetButton(true);
         RuntimeManager.PlayOneShot(removeItem_audio);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.transform.parent == null)
-        {
-            return;
-        }
-        
-        var parentGameObject = other.gameObject.transform.parent.gameObject;
-        var draggable = parentGameObject.GetComponent<Draggable>();
-        if (draggable == currentDraggable)
-        {
-            currentDraggable.OnDragEndListener -= OnDropIngredient;
-            currentDraggable = null;
-        }
     }
 
     private bool IsOnLeft(IngredientWorld ingredientWorld)

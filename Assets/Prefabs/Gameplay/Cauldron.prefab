@@ -4990,7 +4990,7 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -9847,6 +9847,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fb6a53d3ab1547f79db5c788c04af2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 0}
+  clip_01: {fileID: 0}
+  clip_02: {fileID: 0}
   cauldron: {fileID: 763748735027613507}
 --- !u!1 &8985571455141533105
 GameObject:
@@ -9900,18 +9903,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49e7d2ef1ffb24bb7b1ee70d1880efca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  defeatAudio:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   ingredients: []
   levelManager: {fileID: 11400000, guid: 8c00494bf01964b92858539440084d64, type: 2}
   ingredientsManager: {fileID: 0}
   gameManager: {fileID: 0}
-  mixButton: {fileID: 0}
   camAnimator: {fileID: 0}
   cauldronAnimator: {fileID: 4633432956896541183}
   cauldronPreview: {fileID: 0}
   scaleController: {fileID: 0}
   potionSpawner: {fileID: 6005785923216822447}
   cauldronButtonController: {fileID: 4323637920294902210}
-  resetCamTime: 3.5
 --- !u!114 &4633432956896541183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10114,6 +10129,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 2599582208652637122}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 4323637920294902210}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2709b38bc5e86a8458c89c64ab6ab81a,
         type: 3}
@@ -10150,6 +10169,102 @@ MonoBehaviour:
   precomputeOutline: 0
   bakeKeys: []
   bakeValues: []
+--- !u!82 &2599582208652637122
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936317354076719542}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &4323637920294902210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10162,10 +10277,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10551089c46d9c44e8bd780d62c6aea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 2599582208652637122}
+  clip: {fileID: 8300000, guid: 1995f17e24d29774fba39ab6f9267ba0, type: 3}
   outlines:
   - {fileID: 740011127913364267}
   - {fileID: 302894682515277433}
   cauldronWorld: {fileID: 763748735027613507}
+  defaultWidth: 4
 --- !u!135 &3885342263321487726
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10185,7 +10303,7 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.8
+  m_Radius: 1
   m_Center: {x: 0, y: 0.35, z: 0}
 --- !u!1001 &8170953947012987510
 PrefabInstance:

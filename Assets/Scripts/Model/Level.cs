@@ -12,6 +12,7 @@ namespace Model
         public int targetWeight;
         public GameObject targetPotion;
         public Sprite targetPotionIcon;
+        public String LevelHint;
     }
 
     [Serializable]

@@ -18,8 +18,8 @@ public class TutorialController : MonoBehaviour
     private Color hiddenColor = new Color(1,1,1,0);
     [SerializeField]
     private float graphicsChangeDuration = 0.5f;
-    [SerializeField]
-    private float camMovementDuration = 3;
+    //[SerializeField]
+    //private float camMovementDuration = 3;
 
     [SerializeField]
     private GameObject closeButton;

@@ -19,3 +19,4 @@ MonoBehaviour:
   targetPotion: {fileID: 2193767725270807982, guid: c8232feb2100e22448997cd4f362625b,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: f65b2bab18d98464d8c3b5955fe419a1, type: 3}
+  LevelHint: First hint test
