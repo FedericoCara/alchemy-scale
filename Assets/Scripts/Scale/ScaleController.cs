@@ -55,11 +55,11 @@ public class ScaleController : MonoBehaviour
         onTouchRight?.Invoke();
     }
 
-    public void AddIngredientLeft(IngredientWorld ingredient)
+    public bool AddIngredientLeft(IngredientWorld ingredient)
     {
         if (ingredientsWorldLeft.Count >= leftPositions.Count)
         {
-            return;
+            return false;
         }
 
         ingredient.transform.position = leftPositions[ingredientsWorldLeft.Count].position;
@@ -69,6 +69,8 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldLeft.Add(ingredient);
         CalcResult();
         onTouchLeft?.Invoke();
+
+        return true;
     }
     
     public void RemoveLastItemLeft()
@@ -83,11 +85,11 @@ public class ScaleController : MonoBehaviour
         }
     }
     
-    public void AddIngredientRight(IngredientWorld ingredient)
+    public bool AddIngredientRight(IngredientWorld ingredient)
     {
         if (ingredientsWorldRight.Count >= rightPositions.Count)
         {
-            return;
+            return false;
         }
         
         ingredient.transform.position = rightPositions[ingredientsWorldRight.Count].position;
@@ -97,6 +99,8 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldRight.Add(ingredient);
         CalcResult();
         onTouchRight?.Invoke();
+
+        return true;
     }
 
     public void RemoveLastItemRight()
@@ -234,16 +238,24 @@ public class ScaleController : MonoBehaviour
 
         var ingredientWorld = draggable.gameObject.GetComponent<IngredientWorld>();
         List<Ingredient> previousIngredients;
+
+        bool getResult = false;
+
         if (IsOnLeft(ingredientWorld))
         {
             previousIngredients = ingredientsWorldLeft.Select(previousIngredient => previousIngredient.ingredient).ToList();
-            AddIngredientLeft(ingredientWorld);
+            getResult = AddIngredientLeft(ingredientWorld);
         }
         else
         {
             previousIngredients = ingredientsWorldRight.Select(previousIngredient => previousIngredient.ingredient).ToList();
-            AddIngredientRight(ingredientWorld);
+            getResult = AddIngredientRight(ingredientWorld);
             
+        }
+
+        if (getResult == false)
+        {
+            return;
         }
 
         TurnOnSynergyIfNecessary(ingredientWorld, previousIngredients);
