@@ -15,11 +15,12 @@ MonoBehaviour:
   startingIngredients:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 2
-  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
+  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
     amount: 1
   - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
     amount: 1
-  targetWeight: 105
+  targetWeight: 90
   targetPotion: {fileID: 1051766588506094876, guid: 3940818aeac877c4186975819d6cbac8,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: 75d7ac0c540df4a42b7a29ed37800f37, type: 3}
+  LevelHint: Each tentacle affects the synergy

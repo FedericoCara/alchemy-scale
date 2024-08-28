@@ -10,6 +10,9 @@ using FMODUnity;
 
 public class ScaleController : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip clip;
+
     [SerializeField] private Animator animator;
     [SerializeField] private List<Transform> leftPositions;
     [SerializeField] private List<Transform> rightPositions;
@@ -156,7 +159,6 @@ public class ScaleController : MonoBehaviour
     }
 
     public void Reset()
-    
     {
         foreach (var ingredientWorld in ingredientsWorldLeft)
         {
@@ -178,6 +180,8 @@ public class ScaleController : MonoBehaviour
     }
     private void ResetIngredientPosition(IngredientWorld ingredientWorld)
     {
+        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
+        draggable.CreateDust();
         ingredientWorld.transform.position = _spawner.GetNextSpawnPoint().position;
         var rigidBody = ingredientWorld.transform.GetComponentInParent<Rigidbody>();
         if (rigidBody != null)
@@ -186,7 +190,6 @@ public class ScaleController : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
         }
         ingredientWorld.transform.parent = null;
-        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
         draggable.Interactable = true;
     }
 
@@ -266,5 +269,9 @@ public class ScaleController : MonoBehaviour
         {
             ingredientWorld.TurnOnSynergy();
         }
+    }
+    public void PlayTheSound()
+    {
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, 0.4f);
     }
 }

@@ -89,7 +89,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1524390607601797504}
+      addedObject: {fileID: 5680484309815935095}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!4 &1337481738152618076 stripped
 Transform:
@@ -118,11 +118,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 345825932
-      Data2: 1087915735
-      Data3: -1725473138
-      Data4: 1612274006
-    Path: event:/drop_tentacle
+      Data1: -230462663
+      Data2: 1162137925
+      Data3: -494940011
+      Data4: -1619586950
+    Path: event:/eye
   Event: 
   PlayEvent: 7
   StopEvent: 0
@@ -134,8 +134,8 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!135 &1524390607601797504
-SphereCollider:
+--- !u!136 &5680484309815935095
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -149,12 +149,14 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.13
-  m_Center: {x: 0, y: -0.04, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Height: 0.34
+  m_Direction: 0
+  m_Center: {x: 0, y: -0.03, z: 0}
 --- !u!1001 &5096722576510839661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -230,7 +232,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e750b607860edec45b16e879f2339494,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 5934448469081493609}
+      addedObject: {fileID: 3287617417730240183}
   m_SourcePrefab: {fileID: 100100000, guid: e750b607860edec45b16e879f2339494, type: 3}
 --- !u!4 &4697689077021478022 stripped
 Transform:
@@ -244,8 +246,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5096722576510839661}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &5934448469081493609
-SphereCollider:
+--- !u!65 &3287617417730240183
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -263,5 +265,5 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.1
-  m_Center: {x: 0, y: -0.04, z: 0}
+  m_Size: {x: 0.19, y: 0.09, z: 0.16223744}
+  m_Center: {x: 0, y: -0.026, z: 0}

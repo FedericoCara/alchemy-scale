@@ -4928,6 +4928,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a661926cd8c5a46f88028b4bb6b85fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dustPrefab: {fileID: 8584058879024086544, guid: 7d95c57eb8b240c42a4efe18e5387496,
+    type: 3}
   interactable: 1
   targetRigidbody: {fileID: 2822999165824957607}
   targetCamera: {fileID: 0}

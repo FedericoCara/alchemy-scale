@@ -75,7 +75,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: da32339045947584786c610baad75785,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8689371421011334058}
+      addedObject: {fileID: 6766793265178990369}
   m_SourcePrefab: {fileID: 100100000, guid: da32339045947584786c610baad75785, type: 3}
 --- !u!4 &268308822427927110 stripped
 Transform:
@@ -89,8 +89,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 302726400473228717}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &8689371421011334058
-SphereCollider:
+--- !u!65 &6766793265178990369
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,8 +108,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.13508336
-  m_Center: {x: 0, y: 0.04, z: 0}
+  m_Size: {x: 0.19, y: 0.2, z: 0.13}
+  m_Center: {x: 0, y: 0.026, z: 0}
 --- !u!1001 &1900492354284124363
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -168,6 +168,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2822999165824957607, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      propertyPath: m_Mass
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6439588687789369626, guid: 082b5b3003ddf49f1bf9b657ce021432,
         type: 3}
       propertyPath: ingredient
@@ -199,7 +204,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7714222494734985193}
+      addedObject: {fileID: 2724368397135457061}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!4 &1337481738152618076 stripped
 Transform:
@@ -228,11 +233,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 345825932
-      Data2: 1087915735
-      Data3: -1725473138
-      Data4: 1612274006
-    Path: event:/drop_tentacle
+      Data1: -230462663
+      Data2: 1162137925
+      Data3: -494940011
+      Data4: -1619586950
+    Path: event:/eye
   Event: 
   PlayEvent: 7
   StopEvent: 0
@@ -244,8 +249,8 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
---- !u!135 &7714222494734985193
-SphereCollider:
+--- !u!136 &2724368397135457061
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -262,6 +267,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.17
-  m_Center: {x: 0, y: 0.03, z: 0}
+  serializedVersion: 2
+  m_Radius: 0.14
+  m_Height: 0.35
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.04, z: 0}

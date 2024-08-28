@@ -15,11 +15,14 @@ MonoBehaviour:
   startingIngredients:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 2
-  - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
-    amount: 1
+  - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
+    amount: 2
   - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
-    amount: 1
-  targetWeight: 100
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
+    amount: 2
+  targetWeight: 180
   targetPotion: {fileID: 195857427715127852, guid: c70de89f2e279794d86b7bb6ab00c476,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: e9f0167ccbf69ec41902f8409a2a721d, type: 3}
+  LevelHint: Herbs enrich the flavor of the mix

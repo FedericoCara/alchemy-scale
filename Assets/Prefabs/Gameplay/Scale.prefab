@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4337731823651951614}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052598, y: -0, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: -0.45, y: 0.59999996, z: 0.5}
+  m_LocalPosition: {x: -0.4, y: 0.59999996, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52,7 +52,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8, y: 1, z: 2}
+  m_Size: {x: 0.7, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8135642716969958623
 MonoBehaviour:
@@ -135,6 +135,7 @@ MonoBehaviour:
       Data3: -373004374
       Data4: -1205834922
     Path: event:/hinge
+  currentDraggable: {fileID: 0}
 --- !u!54 &1844206152124881923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -189,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 8445329735073793114}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052598, y: -0, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: 0.45, y: 0.59999996, z: 0.5}
+  m_LocalPosition: {x: 0.4, y: 0.59999996, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -214,7 +215,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.8, y: 1, z: 2}
+  m_Size: {x: 0.7, y: 1, z: 2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2533011594517897263
 MonoBehaviour:

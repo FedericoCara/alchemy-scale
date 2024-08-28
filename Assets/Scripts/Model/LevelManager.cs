@@ -7,7 +7,7 @@ namespace Model
     [CreateAssetMenu(menuName = "AlchemyScale/Level Manager")]
     public class LevelManager : ScriptableObject
     {
-        private int currentLevelIndex;
+        public int currentLevelIndex;
         [SerializeField]
         private int _startingLevelIndex;
 

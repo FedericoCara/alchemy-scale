@@ -815,6 +815,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b6596f2813d4a4e12a8b3cc9a2655093, type: 2}
   - {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
   - {fileID: 11400000, guid: fac68ae2510de4a8e870f93bd49cb205, type: 2}
+  - {fileID: 11400000, guid: c2bb4426b610d43e1bde33de512b5e52, type: 2}
   IngredientViewPrefab: {fileID: 8355776058847148930, guid: 3a92d7ed518704fe0ac578132159cc8c,
     type: 3}
   ingredientViewParent: {fileID: 5945482206637323043}

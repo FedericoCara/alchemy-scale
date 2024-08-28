@@ -32,8 +32,6 @@ namespace Components.Cauldron
                 {
                     SetOutline(false);
                 }
-
-                Debug.Log($"Me setearon {_interactable}");
             }
         }
 
