@@ -81,7 +81,7 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldLeft));
             ingredientsWorldLeft.RemoveAt(ingredientsWorldLeft.Count - 1);
             CalcResult();
-            EnableResetButton(ingredientsWorldLeft.Count>0);
+            EnableResetButton(!IsScaleEmpty());
         }
     }
     
@@ -111,8 +111,13 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldRight));
             ingredientsWorldRight.RemoveAt(ingredientsWorldRight.Count - 1);
             CalcResult();
-            EnableResetButton(ingredientsWorldRight.Count>0);
+            EnableResetButton(!IsScaleEmpty());
         }
+    }
+
+    private bool IsScaleEmpty()
+    {
+        return ingredientsWorldRight.Count>0 && ingredientsWorldLeft.Count>0;
     }
 
     private void RemoveItem(IngredientWorld ingredientWorld, List<Ingredient> previousIngredients)

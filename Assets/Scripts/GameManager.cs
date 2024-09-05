@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
     public void SetSuccess()
     {
-        switch (levelManager.currentLevelIndex)
+        switch (levelManager.LevelNumber-1)
         {
             case 0:
                 {
@@ -176,10 +176,5 @@ public class GameManager : MonoBehaviour
     public void SetFail()
     {
         ingredientsManager.RestartIngredients();
-    }
-
-    public int GetCurrentLevel()
-    {
-        return levelManager.currentLevelIndex;
     }
 }

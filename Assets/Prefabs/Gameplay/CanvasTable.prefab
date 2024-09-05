@@ -1866,8 +1866,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<size=3>Music</size>\nFederico Tula Ruiz\n\n<size=3>SFXs</size>\nGerm\xE1n
-    Sartori\n\n<size=3>Game Design</size>\nRoby"
+  m_text: "<size=3>Music</size>\nFederico Tula Ruiz\n\n<size=3>Sound design and implementation</size>\nGerm\xE1n
+    Sartori\n\n<size=3>Game Design</size>\nJuan Pablo P\xE9rez Burgos\nMart\xEDn
+    Salvador Sosa\nRoby"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c12294f9dca17ae42bee369d7645b3fa, type: 2}
   m_sharedMaterial: {fileID: 6875356653761359662, guid: c12294f9dca17ae42bee369d7645b3fa,

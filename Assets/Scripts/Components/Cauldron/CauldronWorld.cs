@@ -7,7 +7,7 @@ using FMODUnity;
 namespace Components.Cauldron
 {
     public class CauldronWorld : MonoBehaviour
-    {      
+    {
         [SerializeField] private EventReference winAudio;
         [SerializeField] private EventReference defeatAudio;
         public List<Ingredient> ingredients;
@@ -52,16 +52,22 @@ namespace Components.Cauldron
             EnableMixButton();
         }
 
-        private void AnimateStartMix()
-        {
-            camAnimator.MoveToMixPosition();
-        }
-
         public void OnAnimateStartFinished()
         {
             _lastMixResult = _cauldron.Mix(ingredients);
             cauldronAnimator.AnimateSpin(IsSuccess(_lastMixResult), StopCauldron);
             ingredientsManager.ClearIngredients();
+        }
+
+        public void EmptyCauldron()
+        {
+            EmptyIngredients();
+            DisableMixButton();
+        }
+
+        private void AnimateStartMix()
+        {
+            camAnimator.MoveToMixPosition();
         }
 
         private void StopCauldron()
