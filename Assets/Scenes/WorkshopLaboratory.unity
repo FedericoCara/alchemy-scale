@@ -297,7 +297,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &108553327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4431,6 +4431,7 @@ MonoBehaviour:
   cameraAnimator: {fileID: 1039443889}
   creditsPanel: {fileID: 458733609}
   tutorialController: {fileID: 1284862336}
+  nextLevelEditorButton: {fileID: 108553326}
   tutorialTitles: []
   tutorialTexts: []
   allIngredients:

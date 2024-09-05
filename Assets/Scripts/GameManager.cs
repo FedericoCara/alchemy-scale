@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private CameraAnimator cameraAnimator;
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private TutorialController tutorialController;
+    [SerializeField] private GameObject nextLevelEditorButton;
 
     public String[] tutorialTitles;
     public String[] tutorialTexts;
@@ -51,6 +52,7 @@ public class GameManager : MonoBehaviour
     public void OnTutorialFinished()
     {
         ingredientsManager.RestartIngredients();
+        ShowNextLevelEditorButton(true);
     }
 
     public void SetSuccess()
@@ -166,6 +168,7 @@ public class GameManager : MonoBehaviour
             creditsPanel.SetActive(true);
             tutorialController.gameObject.SetActive(false);
             levelManager.ResetGame();
+            ShowNextLevelEditorButton(false);
             return;
         }
 
@@ -176,5 +179,12 @@ public class GameManager : MonoBehaviour
     public void SetFail()
     {
         ingredientsManager.RestartIngredients();
+    }
+
+    private void ShowNextLevelEditorButton(bool isOn)
+    {
+#if UNITY_EDITOR
+        nextLevelEditorButton.SetActive(isOn);
+#endif
     }
 }
