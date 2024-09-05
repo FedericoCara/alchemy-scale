@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
                 }
                 break;
 
-            case 15:
+            case 16:
                 {
                     glossary.Unlock(allIngredients[5]);
                 }
