@@ -7,6 +7,9 @@ namespace Components.Cauldron
 {
     public class CauldronButtonController : MonoBehaviour
     {
+        public AudioSource audioSource;
+        public AudioClip clip;
+
         [SerializeField]
         private List<Outline> outlines;
 
@@ -16,7 +19,7 @@ namespace Components.Cauldron
         [SerializeField]
         private float defaultWidth = 4;
 
-        private bool _interactable = true;
+        private bool _interactable = false;
 
         public bool Interactable
         {
@@ -24,8 +27,11 @@ namespace Components.Cauldron
             set
             {
                 _interactable = value;
+
                 if(!value)
+                {
                     SetOutline(false);
+                }
             }
         }
 
@@ -33,16 +39,19 @@ namespace Components.Cauldron
         private IEnumerator Start()
         {
             yield return new WaitForEndOfFrame();
+
             foreach (Outline outline in outlines)
             {
                 outline.OutlineWidth = 0;
             }
         }
 
-        private void OnMouseEnter()
+        private void OnMouseOver()
         {
-            if(_interactable)
+            if (_interactable)
+            {
                 SetOutline(true);
+            }
         }
 
         private void OnMouseExit()
@@ -52,8 +61,11 @@ namespace Components.Cauldron
 
         private void OnMouseUpAsButton()
         {
-            if(_interactable)
+            if (_interactable)
+            {
+                audioSource.PlayOneShot(clip);
                 cauldronWorld.Mix();
+            }
         }
 
         private void SetOutline(bool outlineEnabled)

@@ -14,16 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingIngredients:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
-    amount: 2
+    amount: 5
   - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
+    amount: 2
+  - ingredient: {fileID: 11400000, guid: fac68ae2510de4a8e870f93bd49cb205, type: 2}
     amount: 1
-  - ingredient: {fileID: 11400000, guid: 1033cc9272a6f43eba7c6b2688691ec9, type: 2}
-    amount: 1
-  - ingredient: {fileID: 11400000, guid: 15217d02c08d542599ff34691260c339, type: 2}
-    amount: 1
-  - ingredient: {fileID: 11400000, guid: 7f07f2754dc68467481b8705ef5a0f11, type: 2}
-    amount: 1
-  targetWeight: 105
+  targetWeight: 5
   targetPotion: {fileID: 2270961321714621918, guid: 19526debd368d0945a48caeac59ff6c6,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: 35e16bf93a32b544693ef3080d2d8098, type: 3}
+  LevelHint: These potions are lighter on your bag

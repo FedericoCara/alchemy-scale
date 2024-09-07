@@ -16,12 +16,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f117d60c800391b44a2086a3a00d07b5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0099
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f117d60c800391b44a2086a3a00d07b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.0067
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f117d60c800391b44a2086a3a00d07b5,
         type: 3}
@@ -62,6 +62,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ingredient_Animal_FrogLeg
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f117d60c800391b44a2086a3a00d07b5,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -176,6 +181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngredientC
       objectReference: {fileID: 0}
+    - target: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -188,6 +198,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2004440812370873306}
+    - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2792704516593908383}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!1 &2220429862945517331 stripped
 GameObject:
@@ -226,6 +240,27 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!135 &2792704516593908383
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220429862945517331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.12
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &7095723314504600972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 635103445008502935, guid: 082b5b3003ddf49f1bf9b657ce021432,

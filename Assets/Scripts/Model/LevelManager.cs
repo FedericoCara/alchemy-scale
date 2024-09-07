@@ -17,7 +17,6 @@ namespace Model
         [SerializeField]
         private List<Level> levels;
 
-
         public Level CurrentLevel => levels[currentLevelIndex];
 
         public Level GetAndSetNextLevel()
@@ -28,7 +27,12 @@ namespace Model
                 LevelNumberChanged.Invoke();
                 return CurrentLevel;
             }
-            return null;
+            else
+            {
+                currentLevelIndex = 0;
+                LevelNumberChanged.Invoke();
+                return null;
+            }
         }
 
 

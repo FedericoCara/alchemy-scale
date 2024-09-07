@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using Utils;
 
 namespace Components
 {
     public class Draggable : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
+        public GameObject dustPrefab;
+
         [SerializeField]
         private bool interactable = true;
         public bool Interactable { get { return interactable; } set { interactable = value; } }
@@ -32,6 +35,13 @@ namespace Components
 
         public event Action<Draggable> OnDragEndListener;
 
+        private bool isSceneUnloading = false;
+
+        private void OnEnable()
+        {
+            // Subscribe to scene unloading event
+            SceneManager.sceneUnloaded += OnSceneUnloaded;
+        }
 
         void Start() {
             if (targetCamera == null) {
@@ -89,6 +99,12 @@ namespace Components
             xy.Raycast(ray, out distance);
             return ray.GetPoint(distance);
         }
+        public void StopDragging()
+        {
+            targetRigidbody.useGravity = true;
+            _dragging = false;
+            OnDragEndListener?.Invoke(this);
+        }
 
         public virtual void OnDraggedOver(PointerEventData eventData, List<RaycastResult> objectsDraggedOver) {
 
@@ -99,6 +115,36 @@ namespace Components
             targetRigidbody.useGravity = true;
             _dragging = false;
             OnDragEndListener?.Invoke(this);
+        }
+        private void OnDisable()
+        {
+            // Unsubscribe from the event to avoid memory leaks
+            SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        }
+
+        public void CreateDust()
+        {
+            Instantiate(dustPrefab, transform.position, transform.rotation);
+        }
+
+        private void OnDestroy()
+        {
+            if (!isSceneUnloading)
+            {
+                Instantiate(dustPrefab, transform.position, transform.rotation);
+            }
+        }
+
+        private void OnSceneUnloaded(Scene scene)
+        {
+            // Set flag to indicate scene is unloading
+            isSceneUnloading = true;
+        }
+
+        private void OnApplicationQuit()
+        {
+            // Ensure the flag is set when the application is quitting
+            isSceneUnloading = true;
         }
     }
 }

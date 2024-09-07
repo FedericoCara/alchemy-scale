@@ -63,6 +63,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient_Plant_Herb
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 61aad595f74b6804a82f8bf6634e038c,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -176,6 +181,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngredientE
       objectReference: {fileID: 0}
+    - target: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -188,6 +198,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4847568657203323867}
+    - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8983727937375245141}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!1 &2220429862945517331 stripped
 GameObject:
@@ -226,6 +240,29 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!136 &8983727937375245141
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220429862945517331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.08
+  m_Height: 0.4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &7095723314504600972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 635103445008502935, guid: 082b5b3003ddf49f1bf9b657ce021432,

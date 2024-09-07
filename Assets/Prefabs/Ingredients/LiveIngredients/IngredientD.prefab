@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ingredient_Plant_Mushroom
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dc4c14d0cc56fd4e825e5facc3dee74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Ingredient
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -75,7 +80,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3dc4c14d0cc56fd4e825e5facc3dee74,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3578470552020811740}
+      addedObject: {fileID: 5842883965847407029}
   m_SourcePrefab: {fileID: 100100000, guid: 3dc4c14d0cc56fd4e825e5facc3dee74, type: 3}
 --- !u!4 &2363843490033852064 stripped
 Transform:
@@ -89,8 +94,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 2829586973065951563}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &3578470552020811740
-CapsuleCollider:
+--- !u!135 &5842883965847407029
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107,11 +112,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.096318185
-  m_Height: 0.19263637
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.01583755, z: 0.021564245}
+  serializedVersion: 3
+  m_Radius: 0.11
+  m_Center: {x: 0, y: 0.0038675778, z: 0}
 --- !u!1001 &7685751159312276763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -181,6 +184,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: IngredientD
       objectReference: {fileID: 0}
+    - target: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -193,6 +201,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: -3468884103045529054}
+    - targetCorrespondingSourceObject: {fileID: 8392960138936562184, guid: 082b5b3003ddf49f1bf9b657ce021432,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6645561830019548766}
   m_SourcePrefab: {fileID: 100100000, guid: 082b5b3003ddf49f1bf9b657ce021432, type: 3}
 --- !u!1 &2220429862945517331 stripped
 GameObject:
@@ -231,6 +243,27 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!135 &6645561830019548766
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2220429862945517331}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.13
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &7095723314504600972 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 635103445008502935, guid: 082b5b3003ddf49f1bf9b657ce021432,

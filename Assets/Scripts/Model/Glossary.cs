@@ -8,6 +8,7 @@ public class Glossary
     private Dictionary<Ingredient, bool> unlockedIngrediensts = new();
     private Dictionary<Ingredient, bool> unlockedWeights = new();
     private Dictionary<Sinergy, bool> unlockedSynergies = new();
+    private Dictionary<int, bool> unlockedTutorials = new();
 
     public bool IsUnlocked(Ingredient ingredient)
     {
@@ -37,5 +38,14 @@ public class Glossary
     public void Unlock(Sinergy synergy)
     {
         unlockedSynergies[synergy] = true;
+    }
+    public bool IsUnlocked(int tutorial)
+    {
+        return unlockedTutorials.ContainsKey(tutorial) && unlockedTutorials[tutorial];
+    }
+
+    public void Unlock(int tutorial)
+    {
+        unlockedTutorials[tutorial] = true;
     }
 }

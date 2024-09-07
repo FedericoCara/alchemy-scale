@@ -6,7 +6,14 @@ using UnityEngine;
 public class ScaleTrigger : MonoBehaviour
 {
     [SerializeField] public GameObject scaleObject;
+    private ScaleController getScaleController = null;
     [SerializeField] public bool isLeft = true;
+    private bool isOnDragEndListenerAdded = false;
+
+    private void Awake()
+    {
+        getScaleController = scaleObject.GetComponent<ScaleController>();
+    }
 
     void Update()
     {
@@ -23,10 +30,8 @@ public class ScaleTrigger : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit))
         {
-            if (hit.collider.CompareTag("LeftTrigger") || hit.collider.CompareTag("RigthTrigger"))
+            if (hit.collider.CompareTag("LeftTrigger") || hit.collider.CompareTag("RightTrigger"))
             {
-                ScaleController getScaleController = scaleObject.GetComponent<ScaleController>();
-
                 if (hit.collider.CompareTag("LeftTrigger"))
                 {
                     if (isLeft)
@@ -34,13 +39,59 @@ public class ScaleTrigger : MonoBehaviour
                         getScaleController.RemoveLastItemLeft();
                     }
                 }
-                else if (hit.collider.CompareTag("RigthTrigger"))
+                else if (hit.collider.CompareTag("RightTrigger"))
                 {
                     if (!isLeft)
                     {
                         getScaleController.RemoveLastItemRight();
                     }
                 }
+            }
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        var parentTransform = other.gameObject.transform.parent;
+
+        if (parentTransform == null || !other.CompareTag("Ingredient"))
+        {
+            return;
+        }
+
+        var draggable = parentTransform.GetComponent<Draggable>();
+
+        if (draggable.isDragging)
+        {
+            getScaleController.currentDraggable = draggable;
+
+            if (!isOnDragEndListenerAdded)
+            {
+                getScaleController.currentDraggable.OnDragEndListener += getScaleController.OnDropIngredient;
+                isOnDragEndListenerAdded = true;
+            }
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        var parentTransform = other.gameObject.transform.parent;
+
+        if (parentTransform == null || !other.CompareTag("Ingredient"))
+        {
+            return;
+        }
+
+        var draggable = parentTransform.GetComponent<Draggable>();
+
+        if (draggable == getScaleController.currentDraggable)
+        {
+            if (isOnDragEndListenerAdded)
+            {
+                getScaleController.currentDraggable.OnDragEndListener -= getScaleController.OnDropIngredient;
+                isOnDragEndListenerAdded = false;
             }
         }
     }

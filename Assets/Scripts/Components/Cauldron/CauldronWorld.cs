@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Components.Ingredients;
-using DG.Tweening;
 using Model;
 using UnityEngine;
 using FMODUnity;
@@ -8,22 +7,20 @@ using FMODUnity;
 namespace Components.Cauldron
 {
     public class CauldronWorld : MonoBehaviour
-    {      
+    {
         [SerializeField] private EventReference winAudio;
         [SerializeField] private EventReference defeatAudio;
         public List<Ingredient> ingredients;
         public LevelManager levelManager;
         public IngredientsManager ingredientsManager;
         public GameManager gameManager;
-        public GameObject mixButton;
         public CameraAnimator camAnimator;
         public CauldronAnimator cauldronAnimator;
         public CauldronPreview cauldronPreview;
         public ScaleController scaleController;
         public PotionSpawner potionSpawner;
         public CauldronButtonController cauldronButtonController;
-        public float resetCamTime = 7;
-        
+
 
         private Model.Cauldron _cauldron = new();
         private MixResult _lastMixResult;
@@ -55,16 +52,22 @@ namespace Components.Cauldron
             EnableMixButton();
         }
 
-        private void AnimateStartMix()
-        {
-            camAnimator.MoveToMixPosition();
-        }
-
         public void OnAnimateStartFinished()
         {
             _lastMixResult = _cauldron.Mix(ingredients);
             cauldronAnimator.AnimateSpin(IsSuccess(_lastMixResult), StopCauldron);
             ingredientsManager.ClearIngredients();
+        }
+
+        public void EmptyCauldron()
+        {
+            EmptyIngredients();
+            DisableMixButton();
+        }
+
+        private void AnimateStartMix()
+        {
+            camAnimator.MoveToMixPosition();
         }
 
         private void StopCauldron()

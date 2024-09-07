@@ -86,3 +86,4 @@ FMODProject/Logs/
 FMODProject/*.tmp
 FMODProject/*.log
 fmod_editor.log
+Assets/Plugins/FMOD/Cache/Editor/FMODStudioCache.asset

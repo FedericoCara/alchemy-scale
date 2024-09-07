@@ -13,11 +13,14 @@ MonoBehaviour:
   m_Name: Level 02
   m_EditorClassIdentifier: 
   startingIngredients:
-  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
-    amount: 2
   - ingredient: {fileID: 11400000, guid: 2515b4ab92438428ca5f82ffd954625c, type: 2}
     amount: 2
+  - ingredient: {fileID: 11400000, guid: 85db80c60e7c2344e82233aa647d3a76, type: 2}
+    amount: 1
+  - ingredient: {fileID: 11400000, guid: a7437e4426ccd804885092dc00d45d2a, type: 2}
+    amount: 3
   targetWeight: 25
   targetPotion: {fileID: 5226510898647876592, guid: a54274f3dc90f2843b04a2d1bab22908,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: b2295fd43bc50a74ea547a871f302211, type: 3}
+  LevelHint: Eyes are heavier than tentacles

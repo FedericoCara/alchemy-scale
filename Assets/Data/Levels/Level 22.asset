@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf189656a17b4bde9147a068e772631b, type: 3}
+  m_Name: Level 22
+  m_EditorClassIdentifier: 
+  startingIngredients:
+  - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
+    amount: 3
+  - ingredient: {fileID: 11400000, guid: c2bb4426b610d43e1bde33de512b5e52, type: 2}
+    amount: 1
+  targetWeight: 50
+  targetPotion: {fileID: 1051766588506094876, guid: 3940818aeac877c4186975819d6cbac8,
+    type: 3}
+  targetPotionIcon: {fileID: 21300000, guid: 75d7ac0c540df4a42b7a29ed37800f37, type: 3}
+  LevelHint: I wanted to create so much

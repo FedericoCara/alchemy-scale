@@ -15,7 +15,10 @@ MonoBehaviour:
   startingIngredients:
   - ingredient: {fileID: 11400000, guid: d47f08a3e0f014bd8a876defd33e2b7f, type: 2}
     amount: 3
+  - ingredient: {fileID: 11400000, guid: 85db80c60e7c2344e82233aa647d3a76, type: 2}
+    amount: 1
   targetWeight: 20
   targetPotion: {fileID: 2193767725270807982, guid: c8232feb2100e22448997cd4f362625b,
     type: 3}
   targetPotionIcon: {fileID: 21300000, guid: f65b2bab18d98464d8c3b5955fe419a1, type: 3}
+  LevelHint: How many tentacles weigh 20?

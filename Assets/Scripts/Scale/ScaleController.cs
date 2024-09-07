@@ -10,6 +10,9 @@ using FMODUnity;
 
 public class ScaleController : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip clip;
+
     [SerializeField] private Animator animator;
     [SerializeField] private List<Transform> leftPositions;
     [SerializeField] private List<Transform> rightPositions;
@@ -23,13 +26,11 @@ public class ScaleController : MonoBehaviour
     private List<IngredientWorld> ingredientsWorldLeft = new();
     private List<IngredientWorld> ingredientsWorldRight = new();
 
-    private Draggable currentDraggable;
+    public Draggable currentDraggable;
     private IngredientsManager _spawner;
 
     private float debounceTime = 0.5f; // Time in seconds to wait before allowing another addition
     private float lastDropTime = 0f;
-
-    
 
     public float Result
     {
@@ -54,11 +55,11 @@ public class ScaleController : MonoBehaviour
         onTouchRight?.Invoke();
     }
 
-    public void AddIngredientLeft(IngredientWorld ingredient)
+    public bool AddIngredientLeft(IngredientWorld ingredient)
     {
         if (ingredientsWorldLeft.Count >= leftPositions.Count)
         {
-            return;
+            return false;
         }
 
         ingredient.transform.position = leftPositions[ingredientsWorldLeft.Count].position;
@@ -68,6 +69,8 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldLeft.Add(ingredient);
         CalcResult();
         onTouchLeft?.Invoke();
+
+        return true;
     }
     
     public void RemoveLastItemLeft()
@@ -78,15 +81,15 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldLeft));
             ingredientsWorldLeft.RemoveAt(ingredientsWorldLeft.Count - 1);
             CalcResult();
-            EnableResetButton(ingredientsWorldLeft.Count>0);
+            EnableResetButton(!IsScaleEmpty());
         }
     }
     
-    public void AddIngredientRight(IngredientWorld ingredient)
+    public bool AddIngredientRight(IngredientWorld ingredient)
     {
         if (ingredientsWorldRight.Count >= rightPositions.Count)
         {
-            return;
+            return false;
         }
         
         ingredient.transform.position = rightPositions[ingredientsWorldRight.Count].position;
@@ -96,6 +99,8 @@ public class ScaleController : MonoBehaviour
         ingredientsWorldRight.Add(ingredient);
         CalcResult();
         onTouchRight?.Invoke();
+
+        return true;
     }
 
     public void RemoveLastItemRight()
@@ -106,8 +111,13 @@ public class ScaleController : MonoBehaviour
             RemoveItem(lastItem, GetPreviousIngredientsFromLastItem(ingredientsWorldRight));
             ingredientsWorldRight.RemoveAt(ingredientsWorldRight.Count - 1);
             CalcResult();
-            EnableResetButton(ingredientsWorldRight.Count>0);
+            EnableResetButton(!IsScaleEmpty());
         }
+    }
+
+    private bool IsScaleEmpty()
+    {
+        return ingredientsWorldRight.Count>0 && ingredientsWorldLeft.Count>0;
     }
 
     private void RemoveItem(IngredientWorld ingredientWorld, List<Ingredient> previousIngredients)
@@ -158,7 +168,6 @@ public class ScaleController : MonoBehaviour
     }
 
     public void Reset()
-    
     {
         foreach (var ingredientWorld in ingredientsWorldLeft)
         {
@@ -180,6 +189,8 @@ public class ScaleController : MonoBehaviour
     }
     private void ResetIngredientPosition(IngredientWorld ingredientWorld)
     {
+        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
+        draggable.CreateDust();
         ingredientWorld.transform.position = _spawner.GetNextSpawnPoint().position;
         var rigidBody = ingredientWorld.transform.GetComponentInParent<Rigidbody>();
         if (rigidBody != null)
@@ -188,7 +199,6 @@ public class ScaleController : MonoBehaviour
             rigidBody.velocity = Vector3.zero;
         }
         ingredientWorld.transform.parent = null;
-        var draggable = ingredientWorld.transform.GetComponentInParent<Draggable>();
         draggable.Interactable = true;
     }
 
@@ -222,23 +232,7 @@ public class ScaleController : MonoBehaviour
         animator.SetTrigger("TouchLeft");
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.transform.parent == null)
-        {
-            return;
-        }
-
-        var parentGameObject = other.gameObject.transform.parent.gameObject;
-        var draggable = parentGameObject.GetComponent<Draggable>();
-        if (draggable != null && draggable.isDragging)
-        {
-            currentDraggable = draggable;
-            currentDraggable.OnDragEndListener += OnDropIngredient;
-        }
-    }
-
-    private void OnDropIngredient(Draggable draggable)
+    public void OnDropIngredient(Draggable draggable)
     {
         if (Time.time - lastDropTime < debounceTime)
         {
@@ -249,16 +243,24 @@ public class ScaleController : MonoBehaviour
 
         var ingredientWorld = draggable.gameObject.GetComponent<IngredientWorld>();
         List<Ingredient> previousIngredients;
+
+        bool getResult = false;
+
         if (IsOnLeft(ingredientWorld))
         {
             previousIngredients = ingredientsWorldLeft.Select(previousIngredient => previousIngredient.ingredient).ToList();
-            AddIngredientLeft(ingredientWorld);
+            getResult = AddIngredientLeft(ingredientWorld);
         }
         else
         {
             previousIngredients = ingredientsWorldRight.Select(previousIngredient => previousIngredient.ingredient).ToList();
-            AddIngredientRight(ingredientWorld);
+            getResult = AddIngredientRight(ingredientWorld);
             
+        }
+
+        if (getResult == false)
+        {
+            return;
         }
 
         TurnOnSynergyIfNecessary(ingredientWorld, previousIngredients);
@@ -266,22 +268,6 @@ public class ScaleController : MonoBehaviour
         draggable.Interactable = false;
         EnableResetButton(true);
         RuntimeManager.PlayOneShot(removeItem_audio);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.transform.parent == null)
-        {
-            return;
-        }
-        
-        var parentGameObject = other.gameObject.transform.parent.gameObject;
-        var draggable = parentGameObject.GetComponent<Draggable>();
-        if (draggable == currentDraggable)
-        {
-            currentDraggable.OnDragEndListener -= OnDropIngredient;
-            currentDraggable = null;
-        }
     }
 
     private bool IsOnLeft(IngredientWorld ingredientWorld)
@@ -300,5 +286,9 @@ public class ScaleController : MonoBehaviour
         {
             ingredientWorld.TurnOnSynergy();
         }
+    }
+    public void PlayTheSound()
+    {
+        AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, 0.4f);
     }
 }
