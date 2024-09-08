@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
             "\tCertain ingredients work well together. Putting one of the specified ingredients before the current one can trigger its synergy. Some items only do it once, but others can do it for every item that is repeated in the chain.\n\n\tAn easy example is a tentacle and an eye. That gives us 10 + 25, but eyes make a reaction when a tentacle is anywhere on its left so in this case it subtracts from the weight, making the real value be 10 + \"25 - 10\" = 25.\n\n\tSo if you put them in the inverse order, the synergy for the eye isn't going to be triggered, but the one for the tentacle will.",
             "\tThere are special stones that don't add weight to the sum, they work in a different manner.\n\n\tThink of them as mathematical operators.",
             "\tA green gem acts like a minus operator. When they are added, it subtracts everything on its right to its left.\n\n\tFor example, two tentacles, a gem and three more tentacles would be like this: 10 + 10 - (10 + 10 + 10) = -10. So be careful with how you place your parenthesis.\n\n\tHave in mind that two consecutive gems don't invert the sign of operation.",
-            "\tA blue diamond doubles everything on its left. So if you have two tentacles, a diamond and a mushroom you get: (10 + 10) * 2 + 75 = 115.\n\n\tOher example, if you have a tentacle, a diamond, other tentacles and other demands you get ((10) * 2 + 10) * 2 = 60. Be mindful of how you calculate your numbers."
+            "\tA blue diamond doubles everything on its left. So if you have two tentacles, a diamond and a mushroom you get: (10 + 10) * 2 + 75 = 115.\n\n\tOher example, if you have a tentacle, a diamond, other tentacle and other diamond you get ((10) * 2 + 10) * 2 = 60. Be mindful of how you calculate your numbers."
         };
     }
 
@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public void OnTutorialFinished()
     {
         ingredientsManager.RestartIngredients();
-        ShowNextLevelEditorButton(true);
+        ShowNextLevelEditorButton(false);
     }
 
     public void SetSuccess()
