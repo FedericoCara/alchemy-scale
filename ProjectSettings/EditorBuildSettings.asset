@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WorkshopLaboratory.unity
     guid: b0b770cc4d7d04f4791340b808ddadfa
-  - enabled: 0
-    path: Assets/Scenes/Credits.unity
-    guid: a6035789dadc84b8f97ca3ce56a44318
   m_configObjects: {}
