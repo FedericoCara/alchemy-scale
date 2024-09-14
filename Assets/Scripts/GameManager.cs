@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
     public void OnTutorialFinished()
     {
         ingredientsManager.RestartIngredients();
-        ShowNextLevelEditorButton(false);
+        ShowNextLevelEditorButton(true);
     }
 
     public void SetSuccess()
